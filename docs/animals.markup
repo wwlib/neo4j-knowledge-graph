@@ -1,0 +1,107 @@
+<ul class="graph-diagram-markup" data-internal-scale="1" data-external-scale="1">
+  <li class="node" data-node-id="43" data-x="624.1572217615651" data-y="532.7145314943454">
+    <span class="caption">Animal</span><dl class="properties"><dt>name</dt><dd>Penguin</dd><dt>RobotLikes</dt><dd>I like penguins, I kind of look like one</dd></dl></li>
+  <li class="node" data-node-id="6" data-x="933.151349879012" data-y="605.8132617138787">
+    <span class="caption">User</span><dl class="properties"><dt>name</dt><dd>Cynthia</dd></dl></li>
+  <li class="node" data-node-id="40" data-x="754.4779561441204" data-y="607.3984786597263">
+    <span class="caption">Robot</span><dl class="properties"><dt>name</dt><dd>global</dd></dl></li>
+  <li class="node" data-node-id="46" data-x="835.7368226234116" data-y="774.8997458883897">
+    <span class="caption">Animal</span><dl class="properties"><dt>name</dt><dd>Armadillo</dd></dl></li>
+  <li class="node" data-node-id="42" data-x="721.4299864896126" data-y="939.0413640906445">
+    <span class="caption">Animal</span><dl class="properties"><dt>name</dt><dd>Zebra</dd></dl></li>
+  <li class="node" data-node-id="48" data-x="788.664852399648" data-y="463.25418441222456">
+    <span class="caption">Animal</span><dl class="properties"><dt>name</dt><dd>Fly</dd><dt>plural</dt><dd>flies</dd></dl></li>
+  <li class="node" data-node-id="44" data-x="412.8717932083845" data-y="372.22373890878293">
+    <span class="caption">Animal</span><dl class="properties"><dt>name</dt><dd>Flamingo</dd></dl></li>
+  <li class="node" data-node-id="41" data-x="388.8218137464269" data-y="800.0988209291188">
+    <span class="caption">Animal</span><dl class="properties"><dt>name</dt><dd>Whale</dd><dt>RobotLikes</dt><dd>You know it. One of my favorite mammals</dd></dl></li>
+  <li class="node" data-node-id="56" data-x="223.64906674855828" data-y="761.4029768634481">
+    <span class="caption">User</span><dl class="properties"><dt>name</dt><dd>Andrew</dd></dl></li>
+  <li class="node" data-node-id="52" data-x="613.4018749475737" data-y="746.6553401367329">
+    <span class="caption">AnimalType</span><dl class="properties"><dt>name</dt><dd>Mammal</dd></dl></li>
+  <li class="node" data-node-id="50" data-x="203.2677445677453" data-y="555.631608209108">
+    <span class="caption">AnimalType</span><dl class="properties"><dt>name</dt><dd>Bird</dd><dt>RobotLikes</dt><dd>I like anything with wings</dd></dl></li>
+  <li class="node" data-node-id="45" data-x="229.01944463398812" data-y="334.4994315697485">
+    <span class="caption">Animal</span><dl class="properties"><dt>name</dt><dd>Albatross</dd><dt>plural</dt><dd>albatross</dd></dl></li>
+  <li class="node" data-node-id="47" data-x="515.9874942723668" data-y="944.2549520840122">
+    <span class="caption">Animal</span><dl class="properties"><dt>name</dt><dd>Bat</dd></dl></li>
+  <li class="node" data-node-id="55" data-x="853.6848133106665" data-y="234.19774924605724">
+    <span class="caption">AnimalType</span><dl class="properties"><dt>name</dt><dd>Insect</dd></dl></li>
+  <li class="node" data-node-id="49" data-x="672.9599527359106" data-y="115.56065252911925">
+    <span class="caption">Animal</span><dl class="properties"><dt>name</dt><dd>Butterfly</dd><dt>plural</dt><dd>butterflies</dd></dl></li>
+  <li class="node" data-node-id="51" data-x="450.11803251080465" data-y="580.8581084952883">
+    <span class="caption">AnimalType</span><dl class="properties"><dt>name</dt><dd>Vertebrate</dd></dl></li>
+  <li class="node" data-node-id="53" data-x="621.3131838590285" data-y="332.2072983962372">
+    <span class="caption">AnimalType</span><dl class="properties"><dt>name</dt><dd>Animal</dd></dl></li>
+  <li class="node" data-node-id="54" data-x="1008.5930168625001" data-y="415.9491635553337">
+    <span class="caption">AnimalType</span><dl class="properties"><dt>name</dt><dd>Invertebrate</dd></dl></li>
+  <li class="relationship" data-from="6" data-to="43">
+    <span class="type">LIKES</span>
+  </li>
+  <li class="relationship" data-from="6" data-to="40">
+    <span class="type">LIKES</span>
+  </li>
+  <li class="relationship" data-from="40" data-to="46">
+    <span class="type">LIKES</span>
+  </li>
+  <li class="relationship" data-from="40" data-to="42">
+    <span class="type">LIKES</span>
+  </li>
+  <li class="relationship" data-from="40" data-to="48">
+    <span class="type">LIKES</span>
+  </li>
+  <li class="relationship" data-from="40" data-to="44">
+    <span class="type">LIKES</span>
+  </li>
+  <li class="relationship" data-from="40" data-to="41">
+    <span class="type">LIKES</span>
+  </li>
+  <li class="relationship" data-from="40" data-to="43">
+    <span class="type">LIKES</span>
+  </li>
+  <li class="relationship" data-from="56" data-to="41">
+    <span class="type">LIKES</span>
+  </li>
+  <li class="relationship" data-from="41" data-to="52">
+    <span class="type">IS_A</span>
+  </li>
+  <li class="relationship" data-from="42" data-to="52">
+    <span class="type">IS_A</span>
+  </li>
+  <li class="relationship" data-from="43" data-to="50">
+    <span class="type">IS_A</span>
+  </li>
+  <li class="relationship" data-from="44" data-to="50">
+    <span class="type">IS_A</span>
+  </li>
+  <li class="relationship" data-from="45" data-to="50">
+    <span class="type">IS_A</span>
+  </li>
+  <li class="relationship" data-from="46" data-to="52">
+    <span class="type">IS_A</span>
+  </li>
+  <li class="relationship" data-from="47" data-to="52">
+    <span class="type">IS_A</span>
+  </li>
+  <li class="relationship" data-from="48" data-to="55">
+    <span class="type">IS_A</span>
+  </li>
+  <li class="relationship" data-from="49" data-to="55">
+    <span class="type">IS_A</span>
+  </li>
+  <li class="relationship" data-from="50" data-to="51">
+    <span class="type">IS_A</span>
+  </li>
+  <li class="relationship" data-from="51" data-to="53">
+    <span class="type">IS_A</span>
+  </li>
+  <li class="relationship" data-from="52" data-to="51">
+    <span class="type">IS_A</span>
+  </li>
+  <li class="relationship" data-from="54" data-to="53">
+    <span class="type">IS_A</span>
+  </li>
+  <li class="relationship" data-from="55" data-to="54">
+    <span class="type">IS_A</span>
+  </li>
+</ul>

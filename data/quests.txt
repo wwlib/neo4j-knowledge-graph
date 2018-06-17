@@ -1,0 +1,31 @@
+merge (jibo:Robot {name:"Jibo"})
+//
+//create quests
+merge (greetAndrew:Quest {name:"greetAndrew", priority: 1, type: "greet", target: "Andrew", status: "pending"})
+merge (greetAlexis:Quest {name:"greetAlexis", priority: 1, type: "greet", target: "Alexis", status: "attempted"})
+merge (playWhaleSound:Quest {name:"playWhaleSound", priority: 2, type: "playSound", type: "whale", status: "pending"})
+merge (playLionSound:Quest {name:"playLionSound", priority: 2, type: "playSound", type: "lion", status: "pending"})
+merge (playDogSound:Quest {name:"playDogSound", priority: 2, type: "playSound", type: "dog", status: "pending"})
+merge (playSnakeSound:Quest {name:"playSnakeSound", priority: 2, type: "playSound", type: "snake", status: "pending"})
+merge (takeAPhotoOfAndrew:Quest {name:"takeAPhotoOfAndrew", priority: 1, type: "photo", target: "Andrew", status: "pending"})
+merge (takeAPhotoOfAlexis:Quest {name:"takeAPhotoOfAlexis", priority: 1, type: "photo", target: "Alexis", status: "pending"})
+
+//
+// create achievements
+merge (greetEveryone:Achievement {name:"greetEveryone", priority: 1, status: "pending"})
+merge (playAllAnimalSounds:Achievement {name:"playAllAnimalSounds", priority: 2, status: "pending"})
+merge (takeAPhotoOfEveryone:Achievement {name:"takeAPhotoOfEveryone", priority: 1, status: "pending"})
+
+//
+// assign relationsips
+merge (jibo)-[:WANTS_TO]->(greetEveryone)
+merge (greetEveryone)-[:REQUIRES]->(greetAndrew)
+merge (greetEveryone)-[:REQUIRES]->(greetAlexis)
+merge (playAllAnimalSounds)-[:REQUIRES]->(playWhaleSound)
+merge (playAllAnimalSounds)-[:REQUIRES]->(playLionSound)
+merge (playAllAnimalSounds)-[:REQUIRES]->(playDogSound)
+merge (playAllAnimalSounds)-[:REQUIRES]->(playSnakeSound)
+merge (jibo)-[:WANTS_TO]->(playAllAnimalSounds)
+merge (greetEveryone)-[:UNLOCKS]->(takeAPhotoOfEveryone)
+merge (takeAPhotoOfEveryone)-[:REQUIRES]->(takeAPhotoOfAndrew)
+merge (takeAPhotoOfEveryone)-[:REQUIRES]->(takeAPhotoOfAlexis)

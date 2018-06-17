@@ -1,0 +1,46 @@
+circle.node-base {
+   fill: #FF756E;
+   stroke: #E06760;
+   stroke-width: 3px;
+}
+ text.caption {
+   fill: #FFFFFF;
+}
+ body {
+   background-color: lightgrey;
+}
+ circle.node-type-Robot {
+   fill: #BF85D6;
+   stroke: #68BDF6;
+   stroke-width: 3px;
+}
+ circle.node-type-Animal {
+   fill: #68BDF6;
+   stroke: #5CA8DB;
+   stroke-width: 3px;
+}
+ circle.node-type-AnimalType {
+   fill: #6DCE9E;
+   stroke: #60B58B;
+   stroke-width: 3px;
+}
+ circle.node-type-Entity {
+   fill: #FFD86E;
+   stroke: #EDBA39;
+}
+ circle.node-type-User {
+   fill: #DE9BF9;
+   stroke: #BF85D6;
+   stroke-width: 3px;
+}
+ circle.node.overlay:hover {
+   fill: rgba(150, 150, 255, 0.5);
+}
+ circle.node.ring:hover {
+   stroke: rgba(150, 150, 255, 0.5);
+}
+ path.relationship.overlay:hover {
+   fill: rgba(150, 150, 255, 0.5);
+   stroke: rgba(150, 150, 255, 0.5);
+}
+ 
