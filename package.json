@@ -18,7 +18,8 @@
     "neo4j-driver": "^1.5.3",
     "prettyjson": "^1.2.1",
     "request": "^2.83.0",
-    "rx": "^4.1.0"
+    "rx": "^4.1.0",
+    "typescript": "^2.9.2"
   },
   "devDependencies": {
     "@types/node": "^8.0.47"

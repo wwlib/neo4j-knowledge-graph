@@ -1,5 +1,5 @@
 const neo4j = require('neo4j-driver').v1;
-const config = require('../../data/neo4j-db-config.json');
+const config = require('../../data/config.json');
 
 import D3Helper from './helpers/D3Helper';
 
@@ -8,7 +8,7 @@ export default class Neo4jController {
     public driver: any;
 
     constructor() {
-        this.driver = neo4j.driver(config.url, neo4j.auth.basic(config.user, config.password));
+        this.driver = neo4j.driver(config.neo4j.url, neo4j.auth.basic(config.neo4j.user, config.neo4j.password));
     }
 
     call(cypher:string, params?: any): Promise<any> {

@@ -4,7 +4,7 @@ import NLUController, {
 
 const request = require('request');
 
-const dialogFlowConfig: any = require('../data/Dialogflow-config.json');
+const config: any = require('../data/config.json');
 
 export type DialogflowResponseResultMetadata = {
   intentId: string;
@@ -47,7 +47,7 @@ export type DialogflowResponse = {
 
 export default class DialogflowControllerV1 extends NLUController {
 
-    public apiAuthorization: string = `Bearer ${dialogFlowConfig.clientToken}`;
+    public apiAuthorization: string = `Bearer ${config.dialogflow.clientToken}`;
 
     /**
      * @constructor

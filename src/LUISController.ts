@@ -5,7 +5,7 @@ import NLUController, {
 const request = require('request');
 const querystring = require('querystring');
 
-const luisConfig: any = require('../data/LUIS-config.json');
+const config: any = require('../data/config.json');
 
 export type LUISIntent = {
     intent: string;
@@ -31,9 +31,9 @@ export type LUISResponse = {
 
 export default class LUISController extends NLUController {
 
-    public endpoint: string = luisConfig.endpoint;
-    public luisAppId: string = luisConfig.appId;
-    public subscriptionKey: string = luisConfig.subscriptionKey;
+    public endpoint: string = config.luis.endpoint;
+    public luisAppId: string = config.luis.appId;
+    public subscriptionKey: string = config.luis.subscriptionKey;
 
     /**
      * @constructor

@@ -9,7 +9,7 @@ import NLUController, {
 
 const dialogflow = require('dialogflow');
 
-const dialogFlowConfig: any = require('../data/Dialogflow-config.json');
+const config: any = require('../data/config.json');
 
 export type DialogflowQueryInput = {
     text: {
@@ -51,7 +51,7 @@ export type DialogflowResponse = {
 
 export default class DialogflowControllerV2 extends NLUController {
 
-  public projectId = dialogFlowConfig.projectId; //https://dialogflow.com/docs/agents#settings
+  public projectId = config.dialogflow.projectId; //https://dialogflow.com/docs/agents#settings
   public sessionId = 'quickstart-session-id';
 
   // Instantiate a Dialogflow client.
@@ -62,14 +62,14 @@ export default class DialogflowControllerV2 extends NLUController {
 
   constructor() {
     super();
-    let config: any = {
+    let clientConfig: any = {
         credentials: {
-            private_key: dialogFlowConfig.privateKey,
-            client_email: dialogFlowConfig.clientEmail
+            private_key: config.dialogflow.privateKey,
+            client_email: config.dialogflow.clientEmail
         }
     }
     // console.log(`DialogflowControllerV2: constructor: config:`, config);
-    this.sessionClient = new dialogflow.SessionsClient(config);
+    this.sessionClient = new dialogflow.SessionsClient(clientConfig);
     // console.log(this.sessionClient);
   }
 

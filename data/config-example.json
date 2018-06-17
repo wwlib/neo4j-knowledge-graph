@@ -1,0 +1,18 @@
+{
+   "luis": {
+        "endpoint": "",
+        "appId": "",
+        "subscriptionKey": ""
+    },
+    "dialogflow": {
+        "clientToken": "<YOUR-TOKEN>",
+        "projectId": "<YOUR-PROJECT-ID>",
+        "privateKey" : "<YOUR-PRIVATE-KEY>",
+        "clientEmail": "<YOUR-CLIENT-EMAIL>"
+    },
+    "neo4j": {
+        "url": "bolt://localhost:7687",
+        "user": "neo4j",
+        "password": ""
+    }
+}
