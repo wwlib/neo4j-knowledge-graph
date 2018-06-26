@@ -11,7 +11,7 @@
 
 An example of a simple, queryable knowledge graph implemented using neo4j with a node command line interface implemented in TypeScript.
 
-Knowldge Graph Demo Demo Running on Jibo (YouTube): [https://www.youtube.com/embed/0oVCR3pIz0Q](https://www.youtube.com/embed/0oVCR3pIz0Q)
+Knowledge Graph Demo Demo Running on Jibo (YouTube): [https://www.youtube.com/embed/0oVCR3pIz0Q](https://www.youtube.com/embed/0oVCR3pIz0Q)
 
 Note: The code described in this post is based on an example that I worked on with Roberto Pieraccini [http://robertopieraccini.com/home/](http://robertopieraccini.com/home/) at Jibo, Inc. We used a similar example to test a knowledge-graph-enhanced dialog running on Jibo (as seen in the video referenced above)
 
