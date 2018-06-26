@@ -2,6 +2,8 @@
 
 [https://wwlib.github.io/neo4j-knowledge-graph/](https://wwlib.github.io/neo4j-knowledge-graph/)
 
+[https://github.com/wwlib/neo4j-knowledge-graph](https://github.com/wwlib/neo4j-knowledge-graph)
+
 [https://wwlib.github.io](https://wwlib.github.io/)
 
 An example of a simple, queryable knowledge graph implemented using neo4j with a node command line interface implemented in TypeScript.

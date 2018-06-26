@@ -7,13 +7,15 @@
 
 [https://wwlib.github.io/neo4j-knowledge-graph/](https://wwlib.github.io/neo4j-knowledge-graph/)
 
+[https://github.com/wwlib/neo4j-knowledge-graph](https://github.com/wwlib/neo4j-knowledge-graph)
+
 [https://wwlib.github.io](https://wwlib.github.io/)
 
 An example of a simple, queryable knowledge graph implemented using neo4j with a node command line interface implemented in TypeScript.
 
 Knowledge Graph Demo Demo Running on Jibo (YouTube): [https://www.youtube.com/embed/0oVCR3pIz0Q](https://www.youtube.com/embed/0oVCR3pIz0Q)
 
-Note: The code described in this post is based on an example that I worked on with Roberto Pieraccini [http://robertopieraccini.com/home/](http://robertopieraccini.com/home/) at Jibo, Inc. We used a similar example to test a knowledge-graph-enhanced dialog running on Jibo (as seen in the video referenced above)
+Note: The code described in this post is based on an example that I worked on with Roberto Pieraccini ([http://robertopieraccini.com/home/](http://robertopieraccini.com/home/)) at Jibo, Inc. We used a similar example to test a knowledge-graph-enhanced dialog running on Jibo (as seen in the video referenced above)
 
 Note: A nice tool for viewing and live-editing neo4j graphs is called Graph Editor and is available at [http://wwlib.org/graph-editor/](http://wwlib.org/graph-editor/)
 
