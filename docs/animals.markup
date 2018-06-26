@@ -1,43 +1,40 @@
 <ul class="graph-diagram-markup" data-internal-scale="1" data-external-scale="1">
-  <li class="node" data-node-id="43" data-x="624.1572217615651" data-y="532.7145314943454">
+  <li class="node" data-node-id="43" data-x="152.17718025765885" data-y="586.6085134279391">
     <span class="caption">Animal</span><dl class="properties"><dt>name</dt><dd>Penguin</dd><dt>RobotLikes</dt><dd>I like penguins, I kind of look like one</dd></dl></li>
-  <li class="node" data-node-id="6" data-x="933.151349879012" data-y="605.8132617138787">
+  <li class="node" data-node-id="6" data-x="180.26975045274241" data-y="827.9214770459099">
     <span class="caption">User</span><dl class="properties"><dt>name</dt><dd>Cynthia</dd></dl></li>
-  <li class="node" data-node-id="40" data-x="754.4779561441204" data-y="607.3984786597263">
+  <li class="node" data-node-id="40" data-x="310.2614034097454" data-y="600.8658858862888">
     <span class="caption">Robot</span><dl class="properties"><dt>name</dt><dd>global</dd></dl></li>
-  <li class="node" data-node-id="46" data-x="835.7368226234116" data-y="774.8997458883897">
+  <li class="node" data-node-id="46" data-x="752.4462342445054" data-y="662.2124900290147">
     <span class="caption">Animal</span><dl class="properties"><dt>name</dt><dd>Armadillo</dd></dl></li>
-  <li class="node" data-node-id="42" data-x="721.4299864896126" data-y="939.0413640906445">
+  <li class="node" data-node-id="42" data-x="656.1039977200813" data-y="759.3949407508007">
     <span class="caption">Animal</span><dl class="properties"><dt>name</dt><dd>Zebra</dd></dl></li>
-  <li class="node" data-node-id="48" data-x="788.664852399648" data-y="463.25418441222456">
+  <li class="node" data-node-id="48" data-x="684.1433069894917" data-y="502.4497410528495">
     <span class="caption">Animal</span><dl class="properties"><dt>name</dt><dd>Fly</dd><dt>plural</dt><dd>flies</dd></dl></li>
-  <li class="node" data-node-id="44" data-x="412.8717932083845" data-y="372.22373890878293">
+  <li class="node" data-node-id="44" data-x="-37.87731228981022" data-y="739.6822044849548">
     <span class="caption">Animal</span><dl class="properties"><dt>name</dt><dd>Flamingo</dd></dl></li>
-  <li class="node" data-node-id="41" data-x="388.8218137464269" data-y="800.0988209291188">
+  <li class="node" data-node-id="41" data-x="421.48474709603624" data-y="804.998296026775">
     <span class="caption">Animal</span><dl class="properties"><dt>name</dt><dd>Whale</dd><dt>RobotLikes</dt><dd>You know it. One of my favorite mammals</dd></dl></li>
-  <li class="node" data-node-id="56" data-x="223.64906674855828" data-y="761.4029768634481">
+  <li class="node" data-node-id="56" data-x="313.47224790090206" data-y="856.1256941486043">
     <span class="caption">User</span><dl class="properties"><dt>name</dt><dd>Andrew</dd></dl></li>
-  <li class="node" data-node-id="52" data-x="613.4018749475737" data-y="746.6553401367329">
+  <li class="node" data-node-id="52" data-x="441.9212230921049" data-y="429.8244380371235">
     <span class="caption">AnimalType</span><dl class="properties"><dt>name</dt><dd>Mammal</dd></dl></li>
-  <li class="node" data-node-id="50" data-x="203.2677445677453" data-y="555.631608209108">
+  <li class="node" data-node-id="50" data-x="164.07215740954217" data-y="416.813981255983">
     <span class="caption">AnimalType</span><dl class="properties"><dt>name</dt><dd>Bird</dd><dt>RobotLikes</dt><dd>I like anything with wings</dd></dl></li>
-  <li class="node" data-node-id="45" data-x="229.01944463398812" data-y="334.4994315697485">
+  <li class="node" data-node-id="45" data-x="-30.651228736373213" data-y="522.311565358811">
     <span class="caption">Animal</span><dl class="properties"><dt>name</dt><dd>Albatross</dd><dt>plural</dt><dd>albatross</dd></dl></li>
-  <li class="node" data-node-id="47" data-x="515.9874942723668" data-y="944.2549520840122">
+  <li class="node" data-node-id="47" data-x="537.2184513036168" data-y="785.8394857754184">
     <span class="caption">Animal</span><dl class="properties"><dt>name</dt><dd>Bat</dd></dl></li>
-  <li class="node" data-node-id="55" data-x="853.6848133106665" data-y="234.19774924605724">
+  <li class="node" data-node-id="55" data-x="788.3587635059789" data-y="407.31156455367443">
     <span class="caption">AnimalType</span><dl class="properties"><dt>name</dt><dd>Insect</dd></dl></li>
-  <li class="node" data-node-id="49" data-x="672.9599527359106" data-y="115.56065252911925">
+  <li class="node" data-node-id="49" data-x="896.7013467788793" data-y="491.1848667014825">
     <span class="caption">Animal</span><dl class="properties"><dt>name</dt><dd>Butterfly</dd><dt>plural</dt><dd>butterflies</dd></dl></li>
-  <li class="node" data-node-id="51" data-x="450.11803251080465" data-y="580.8581084952883">
+  <li class="node" data-node-id="51" data-x="322.7324123936171" data-y="267.2935332999758">
     <span class="caption">AnimalType</span><dl class="properties"><dt>name</dt><dd>Vertebrate</dd></dl></li>
-  <li class="node" data-node-id="53" data-x="621.3131838590285" data-y="332.2072983962372">
+  <li class="node" data-node-id="53" data-x="495.5607424527785" data-y="139.49572002709658">
     <span class="caption">AnimalType</span><dl class="properties"><dt>name</dt><dd>Animal</dd></dl></li>
-  <li class="node" data-node-id="54" data-x="1008.5930168625001" data-y="415.9491635553337">
+  <li class="node" data-node-id="54" data-x="646.0339958664064" data-y="262.43315708560715">
     <span class="caption">AnimalType</span><dl class="properties"><dt>name</dt><dd>Invertebrate</dd></dl></li>
-  <li class="relationship" data-from="6" data-to="43">
-    <span class="type">LIKES</span>
-  </li>
   <li class="relationship" data-from="6" data-to="40">
     <span class="type">LIKES</span>
   </li>

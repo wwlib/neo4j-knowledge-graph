@@ -17,7 +17,6 @@ CREATE
   (`51` :AnimalType {name:'Vertebrate'}) ,
   (`53` :AnimalType {name:'Animal'}) ,
   (`54` :AnimalType {name:'Invertebrate'}) ,
-  (`6`)-[:`LIKES` ]->(`43`),
   (`6`)-[:`LIKES` ]->(`40`),
   (`40`)-[:`LIKES` ]->(`46`),
   (`40`)-[:`LIKES` ]->(`42`),

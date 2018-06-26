@@ -1,0 +1,516 @@
+{
+  "name": "animals",
+  "connection": {
+    "type": "file"
+  },
+  "type": "file",
+  "scale": 1,
+  "css": "circle.node-base {\n   fill: #FF756E;\n   stroke: #E06760;\n   stroke-width: 3px;\n}\n text.caption {\n   fill: #FFFFFF;\n}\n body {\n   background-color: lightgrey;\n}\n circle.node-type-Robot {\n   fill: #BF85D6;\n   stroke: #68BDF6;\n   stroke-width: 3px;\n}\n circle.node-type-Animal {\n   fill: #68BDF6;\n   stroke: #5CA8DB;\n   stroke-width: 3px;\n}\n circle.node-type-AnimalType {\n   fill: #6DCE9E;\n   stroke: #60B58B;\n   stroke-width: 3px;\n}\n circle.node-type-Entity {\n   fill: #FFD86E;\n   stroke: #EDBA39;\n}\n circle.node-type-User {\n   fill: #DE9BF9;\n   stroke: #BF85D6;\n   stroke-width: 3px;\n}\n circle.node.overlay:hover {\n   fill: rgba(150, 150, 255, 0.5);\n}\n circle.node.ring:hover {\n   stroke: rgba(150, 150, 255, 0.5);\n}\n path.relationship.overlay:hover {\n   fill: rgba(150, 150, 255, 0.5);\n   stroke: rgba(150, 150, 255, 0.5);\n}\n \n",
+  "d3Graph": {
+    "nodes": [
+      {
+        "id": "43",
+        "group": 1,
+        "properties": {
+          "name": "Penguin",
+          "RobotLikes": "I like penguins, I kind of look like one"
+        },
+        "labels": [
+          "Animal"
+        ],
+        "position": {
+          "x": 152.17718025765885,
+          "y": 586.6085134279391
+        }
+      },
+      {
+        "id": "6",
+        "group": 1,
+        "properties": {
+          "name": "Cynthia"
+        },
+        "labels": [
+          "User"
+        ],
+        "position": {
+          "x": 180.26975045274241,
+          "y": 827.9214770459099
+        }
+      },
+      {
+        "id": "40",
+        "group": 1,
+        "properties": {
+          "name": "global"
+        },
+        "labels": [
+          "Robot"
+        ],
+        "position": {
+          "x": 310.2614034097454,
+          "y": 600.8658858862888
+        }
+      },
+      {
+        "id": "46",
+        "group": 1,
+        "properties": {
+          "name": "Armadillo"
+        },
+        "labels": [
+          "Animal"
+        ],
+        "position": {
+          "x": 752.4462342445054,
+          "y": 662.2124900290147
+        }
+      },
+      {
+        "id": "42",
+        "group": 1,
+        "properties": {
+          "name": "Zebra"
+        },
+        "labels": [
+          "Animal"
+        ],
+        "position": {
+          "x": 656.1039977200813,
+          "y": 759.3949407508007
+        }
+      },
+      {
+        "id": "48",
+        "group": 1,
+        "properties": {
+          "name": "Fly",
+          "plural": "flies"
+        },
+        "labels": [
+          "Animal"
+        ],
+        "position": {
+          "x": 684.1433069894917,
+          "y": 502.4497410528495
+        }
+      },
+      {
+        "id": "44",
+        "group": 1,
+        "properties": {
+          "name": "Flamingo"
+        },
+        "labels": [
+          "Animal"
+        ],
+        "position": {
+          "x": -37.87731228981022,
+          "y": 739.6822044849548
+        }
+      },
+      {
+        "id": "41",
+        "group": 1,
+        "properties": {
+          "name": "Whale",
+          "RobotLikes": "You know it. One of my favorite mammals"
+        },
+        "labels": [
+          "Animal"
+        ],
+        "position": {
+          "x": 421.48474709603624,
+          "y": 804.998296026775
+        }
+      },
+      {
+        "id": "56",
+        "group": 1,
+        "properties": {
+          "name": "Andrew"
+        },
+        "labels": [
+          "User"
+        ],
+        "position": {
+          "x": 313.47224790090206,
+          "y": 856.1256941486043
+        }
+      },
+      {
+        "id": "52",
+        "group": 1,
+        "properties": {
+          "name": "Mammal"
+        },
+        "labels": [
+          "AnimalType"
+        ],
+        "position": {
+          "x": 441.9212230921049,
+          "y": 429.8244380371235
+        }
+      },
+      {
+        "id": "50",
+        "group": 1,
+        "properties": {
+          "name": "Bird",
+          "RobotLikes": "I like anything with wings"
+        },
+        "labels": [
+          "AnimalType"
+        ],
+        "position": {
+          "x": 164.07215740954217,
+          "y": 416.813981255983
+        }
+      },
+      {
+        "id": "45",
+        "group": 1,
+        "properties": {
+          "name": "Albatross",
+          "plural": "albatross"
+        },
+        "labels": [
+          "Animal"
+        ],
+        "position": {
+          "x": -30.651228736373213,
+          "y": 522.311565358811
+        }
+      },
+      {
+        "id": "47",
+        "group": 1,
+        "properties": {
+          "name": "Bat"
+        },
+        "labels": [
+          "Animal"
+        ],
+        "position": {
+          "x": 537.2184513036168,
+          "y": 785.8394857754184
+        }
+      },
+      {
+        "id": "55",
+        "group": 1,
+        "properties": {
+          "name": "Insect"
+        },
+        "labels": [
+          "AnimalType"
+        ],
+        "position": {
+          "x": 788.3587635059789,
+          "y": 407.31156455367443
+        }
+      },
+      {
+        "id": "49",
+        "group": 1,
+        "properties": {
+          "name": "Butterfly",
+          "plural": "butterflies"
+        },
+        "labels": [
+          "Animal"
+        ],
+        "position": {
+          "x": 896.7013467788793,
+          "y": 491.1848667014825
+        }
+      },
+      {
+        "id": "51",
+        "group": 1,
+        "properties": {
+          "name": "Vertebrate"
+        },
+        "labels": [
+          "AnimalType"
+        ],
+        "position": {
+          "x": 322.7324123936171,
+          "y": 267.2935332999758
+        }
+      },
+      {
+        "id": "53",
+        "group": 1,
+        "properties": {
+          "name": "Animal"
+        },
+        "labels": [
+          "AnimalType"
+        ],
+        "position": {
+          "x": 495.5607424527785,
+          "y": 139.49572002709658
+        }
+      },
+      {
+        "id": "54",
+        "group": 1,
+        "properties": {
+          "name": "Invertebrate"
+        },
+        "labels": [
+          "AnimalType"
+        ],
+        "position": {
+          "x": 646.0339958664064,
+          "y": 262.43315708560715
+        }
+      }
+    ],
+    "links": [
+      {
+        "source": "6",
+        "target": "40",
+        "value": 1,
+        "id": "1",
+        "type": "LIKES",
+        "startNode": "6",
+        "endNode": "40",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "40",
+        "target": "46",
+        "value": 1,
+        "id": "2",
+        "type": "LIKES",
+        "startNode": "40",
+        "endNode": "46",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "40",
+        "target": "42",
+        "value": 1,
+        "id": "3",
+        "type": "LIKES",
+        "startNode": "40",
+        "endNode": "42",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "40",
+        "target": "48",
+        "value": 1,
+        "id": "4",
+        "type": "LIKES",
+        "startNode": "40",
+        "endNode": "48",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "40",
+        "target": "44",
+        "value": 1,
+        "id": "5",
+        "type": "LIKES",
+        "startNode": "40",
+        "endNode": "44",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "40",
+        "target": "41",
+        "value": 1,
+        "id": "6",
+        "type": "LIKES",
+        "startNode": "40",
+        "endNode": "41",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "40",
+        "target": "43",
+        "value": 1,
+        "id": "7",
+        "type": "LIKES",
+        "startNode": "40",
+        "endNode": "43",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "56",
+        "target": "41",
+        "value": 1,
+        "id": "8",
+        "type": "LIKES",
+        "startNode": "56",
+        "endNode": "41",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "41",
+        "target": "52",
+        "value": 1,
+        "id": "9",
+        "type": "IS_A",
+        "startNode": "41",
+        "endNode": "52",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "42",
+        "target": "52",
+        "value": 1,
+        "id": "10",
+        "type": "IS_A",
+        "startNode": "42",
+        "endNode": "52",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "43",
+        "target": "50",
+        "value": 1,
+        "id": "11",
+        "type": "IS_A",
+        "startNode": "43",
+        "endNode": "50",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "44",
+        "target": "50",
+        "value": 1,
+        "id": "12",
+        "type": "IS_A",
+        "startNode": "44",
+        "endNode": "50",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "45",
+        "target": "50",
+        "value": 1,
+        "id": "13",
+        "type": "IS_A",
+        "startNode": "45",
+        "endNode": "50",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "46",
+        "target": "52",
+        "value": 1,
+        "id": "14",
+        "type": "IS_A",
+        "startNode": "46",
+        "endNode": "52",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "47",
+        "target": "52",
+        "value": 1,
+        "id": "15",
+        "type": "IS_A",
+        "startNode": "47",
+        "endNode": "52",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "48",
+        "target": "55",
+        "value": 1,
+        "id": "16",
+        "type": "IS_A",
+        "startNode": "48",
+        "endNode": "55",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "49",
+        "target": "55",
+        "value": 1,
+        "id": "17",
+        "type": "IS_A",
+        "startNode": "49",
+        "endNode": "55",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "50",
+        "target": "51",
+        "value": 1,
+        "id": "18",
+        "type": "IS_A",
+        "startNode": "50",
+        "endNode": "51",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "51",
+        "target": "53",
+        "value": 1,
+        "id": "19",
+        "type": "IS_A",
+        "startNode": "51",
+        "endNode": "53",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "52",
+        "target": "51",
+        "value": 1,
+        "id": "20",
+        "type": "IS_A",
+        "startNode": "52",
+        "endNode": "51",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "54",
+        "target": "53",
+        "value": 1,
+        "id": "21",
+        "type": "IS_A",
+        "startNode": "54",
+        "endNode": "53",
+        "properties": {},
+        "linknum": 1
+      },
+      {
+        "source": "55",
+        "target": "54",
+        "value": 1,
+        "id": "22",
+        "type": "IS_A",
+        "startNode": "55",
+        "endNode": "54",
+        "properties": {},
+        "linknum": 1
+      }
+    ]
+  },
+  "markup": "<ul class=\"graph-diagram-markup\" data-internal-scale=\"1\" data-external-scale=\"1\">\n  <li class=\"node\" data-node-id=\"43\" data-x=\"152.17718025765885\" data-y=\"586.6085134279391\">\n    <span class=\"caption\">Animal</span><dl class=\"properties\"><dt>name</dt><dd>Penguin</dd><dt>RobotLikes</dt><dd>I like penguins, I kind of look like one</dd></dl></li>\n  <li class=\"node\" data-node-id=\"6\" data-x=\"180.26975045274241\" data-y=\"827.9214770459099\">\n    <span class=\"caption\">User</span><dl class=\"properties\"><dt>name</dt><dd>Cynthia</dd></dl></li>\n  <li class=\"node\" data-node-id=\"40\" data-x=\"310.2614034097454\" data-y=\"600.8658858862888\">\n    <span class=\"caption\">Robot</span><dl class=\"properties\"><dt>name</dt><dd>global</dd></dl></li>\n  <li class=\"node\" data-node-id=\"46\" data-x=\"752.4462342445054\" data-y=\"662.2124900290147\">\n    <span class=\"caption\">Animal</span><dl class=\"properties\"><dt>name</dt><dd>Armadillo</dd></dl></li>\n  <li class=\"node\" data-node-id=\"42\" data-x=\"656.1039977200813\" data-y=\"759.3949407508007\">\n    <span class=\"caption\">Animal</span><dl class=\"properties\"><dt>name</dt><dd>Zebra</dd></dl></li>\n  <li class=\"node\" data-node-id=\"48\" data-x=\"684.1433069894917\" data-y=\"502.4497410528495\">\n    <span class=\"caption\">Animal</span><dl class=\"properties\"><dt>name</dt><dd>Fly</dd><dt>plural</dt><dd>flies</dd></dl></li>\n  <li class=\"node\" data-node-id=\"44\" data-x=\"-37.87731228981022\" data-y=\"739.6822044849548\">\n    <span class=\"caption\">Animal</span><dl class=\"properties\"><dt>name</dt><dd>Flamingo</dd></dl></li>\n  <li class=\"node\" data-node-id=\"41\" data-x=\"421.48474709603624\" data-y=\"804.998296026775\">\n    <span class=\"caption\">Animal</span><dl class=\"properties\"><dt>name</dt><dd>Whale</dd><dt>RobotLikes</dt><dd>You know it. One of my favorite mammals</dd></dl></li>\n  <li class=\"node\" data-node-id=\"56\" data-x=\"313.47224790090206\" data-y=\"856.1256941486043\">\n    <span class=\"caption\">User</span><dl class=\"properties\"><dt>name</dt><dd>Andrew</dd></dl></li>\n  <li class=\"node\" data-node-id=\"52\" data-x=\"441.9212230921049\" data-y=\"429.8244380371235\">\n    <span class=\"caption\">AnimalType</span><dl class=\"properties\"><dt>name</dt><dd>Mammal</dd></dl></li>\n  <li class=\"node\" data-node-id=\"50\" data-x=\"164.07215740954217\" data-y=\"416.813981255983\">\n    <span class=\"caption\">AnimalType</span><dl class=\"properties\"><dt>name</dt><dd>Bird</dd><dt>RobotLikes</dt><dd>I like anything with wings</dd></dl></li>\n  <li class=\"node\" data-node-id=\"45\" data-x=\"-30.651228736373213\" data-y=\"522.311565358811\">\n    <span class=\"caption\">Animal</span><dl class=\"properties\"><dt>name</dt><dd>Albatross</dd><dt>plural</dt><dd>albatross</dd></dl></li>\n  <li class=\"node\" data-node-id=\"47\" data-x=\"537.2184513036168\" data-y=\"785.8394857754184\">\n    <span class=\"caption\">Animal</span><dl class=\"properties\"><dt>name</dt><dd>Bat</dd></dl></li>\n  <li class=\"node\" data-node-id=\"55\" data-x=\"788.3587635059789\" data-y=\"407.31156455367443\">\n    <span class=\"caption\">AnimalType</span><dl class=\"properties\"><dt>name</dt><dd>Insect</dd></dl></li>\n  <li class=\"node\" data-node-id=\"49\" data-x=\"896.7013467788793\" data-y=\"491.1848667014825\">\n    <span class=\"caption\">Animal</span><dl class=\"properties\"><dt>name</dt><dd>Butterfly</dd><dt>plural</dt><dd>butterflies</dd></dl></li>\n  <li class=\"node\" data-node-id=\"51\" data-x=\"322.7324123936171\" data-y=\"267.2935332999758\">\n    <span class=\"caption\">AnimalType</span><dl class=\"properties\"><dt>name</dt><dd>Vertebrate</dd></dl></li>\n  <li class=\"node\" data-node-id=\"53\" data-x=\"495.5607424527785\" data-y=\"139.49572002709658\">\n    <span class=\"caption\">AnimalType</span><dl class=\"properties\"><dt>name</dt><dd>Animal</dd></dl></li>\n  <li class=\"node\" data-node-id=\"54\" data-x=\"646.0339958664064\" data-y=\"262.43315708560715\">\n    <span class=\"caption\">AnimalType</span><dl class=\"properties\"><dt>name</dt><dd>Invertebrate</dd></dl></li>\n  <li class=\"relationship\" data-from=\"6\" data-to=\"40\">\n    <span class=\"type\">LIKES</span>\n  </li>\n  <li class=\"relationship\" data-from=\"40\" data-to=\"46\">\n    <span class=\"type\">LIKES</span>\n  </li>\n  <li class=\"relationship\" data-from=\"40\" data-to=\"42\">\n    <span class=\"type\">LIKES</span>\n  </li>\n  <li class=\"relationship\" data-from=\"40\" data-to=\"48\">\n    <span class=\"type\">LIKES</span>\n  </li>\n  <li class=\"relationship\" data-from=\"40\" data-to=\"44\">\n    <span class=\"type\">LIKES</span>\n  </li>\n  <li class=\"relationship\" data-from=\"40\" data-to=\"41\">\n    <span class=\"type\">LIKES</span>\n  </li>\n  <li class=\"relationship\" data-from=\"40\" data-to=\"43\">\n    <span class=\"type\">LIKES</span>\n  </li>\n  <li class=\"relationship\" data-from=\"56\" data-to=\"41\">\n    <span class=\"type\">LIKES</span>\n  </li>\n  <li class=\"relationship\" data-from=\"41\" data-to=\"52\">\n    <span class=\"type\">IS_A</span>\n  </li>\n  <li class=\"relationship\" data-from=\"42\" data-to=\"52\">\n    <span class=\"type\">IS_A</span>\n  </li>\n  <li class=\"relationship\" data-from=\"43\" data-to=\"50\">\n    <span class=\"type\">IS_A</span>\n  </li>\n  <li class=\"relationship\" data-from=\"44\" data-to=\"50\">\n    <span class=\"type\">IS_A</span>\n  </li>\n  <li class=\"relationship\" data-from=\"45\" data-to=\"50\">\n    <span class=\"type\">IS_A</span>\n  </li>\n  <li class=\"relationship\" data-from=\"46\" data-to=\"52\">\n    <span class=\"type\">IS_A</span>\n  </li>\n  <li class=\"relationship\" data-from=\"47\" data-to=\"52\">\n    <span class=\"type\">IS_A</span>\n  </li>\n  <li class=\"relationship\" data-from=\"48\" data-to=\"55\">\n    <span class=\"type\">IS_A</span>\n  </li>\n  <li class=\"relationship\" data-from=\"49\" data-to=\"55\">\n    <span class=\"type\">IS_A</span>\n  </li>\n  <li class=\"relationship\" data-from=\"50\" data-to=\"51\">\n    <span class=\"type\">IS_A</span>\n  </li>\n  <li class=\"relationship\" data-from=\"51\" data-to=\"53\">\n    <span class=\"type\">IS_A</span>\n  </li>\n  <li class=\"relationship\" data-from=\"52\" data-to=\"51\">\n    <span class=\"type\">IS_A</span>\n  </li>\n  <li class=\"relationship\" data-from=\"54\" data-to=\"53\">\n    <span class=\"type\">IS_A</span>\n  </li>\n  <li class=\"relationship\" data-from=\"55\" data-to=\"54\">\n    <span class=\"type\">IS_A</span>\n  </li>\n</ul>"
+}

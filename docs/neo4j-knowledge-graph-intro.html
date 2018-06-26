@@ -1,0 +1,227 @@
+<html>
+<head>
+    <title>neo4j-knowledge-graph - Intro</title>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <style>
+      html {
+          display: table;
+          margin: auto;
+      }
+
+      body {
+          display: table-cell;
+          vertical-align: middle;
+          max-width: 800px;
+      }
+    </style>
+</head>
+<body>
+
+<h2 id="neo4jknowledgegraph">neo4j-knowledge-graph</h2>
+
+<p><em>Subject</em>: Neo4j Knowledge Graph <br />
+<em>Language</em>: TypeScript (node) <br />
+<em>Repo</em>: git@github.com:wwlib/neo4j-knowledge-graph.git <br />
+<em>Related</em>: Electron-based Graph Editor Tool: https://wwlib.github.io/graph-editor/</p>
+
+<p><a href="https://wwlib.github.io/neo4j-knowledge-graph/">https://wwlib.github.io/neo4j-knowledge-graph/</a></p>
+
+<p><a href="https://wwlib.github.io/">https://wwlib.github.io</a></p>
+
+<p>An example of a simple, queryable knowledge graph implemented using neo4j with a node command line interface implemented in TypeScript.</p>
+
+<p>Knowldge Graph Demo Demo Running on Jibo (YouTube):
+<iframe width="670" height="398" src="https://www.youtube.com/embed/0oVCR3pIz0Q" frameborder="0" allowfullscreen=""></iframe>
+</p>
+
+<p>Note: The code described in this post is based on an example that I worked on with Roberto Pieraccini (http://robertopieraccini.com/home/) at Jibo, Inc. We used a similar example to test a knowledge-graph-enhanced dialog running on Jibo (as seen in the video referenced above)</p>
+
+<p>Note: A nice tool for viewing and live-editing neo4j graphs is called Graph Editor and is available at http://wwlib.org/graph-editor/</p>
+
+<h3 id="overview">Overview</h3>
+
+<p>Overview video (YouTube):
+<iframe width="670" height="398" src="https://www.youtube.com/embed/pEps_xaUWVo" frameborder="0" allowfullscreen=""></iframe>
+</p>
+
+<h3 id="gettingstarted">Getting Started</h3>
+
+<p>One way to enhance NLU-driven dialog interactions is to make use of a knowledge graph. This example uses a neo4j graph (database) to store and query a knowledge graph (kg) containing information about animals. This simple example kg represents the relationships between a robot, and handful of animals, a few animal types and a couple of humans.</p>
+
+<p>This command-line version requires either LUIS or Dialogflow for the NLU. A neo4j graph database is also required (ideally an empty graph). Some setup is required to get started.</p>
+
+<h4 id="setup">Setup</h4>
+
+<p>1 - Clone and install the neo4j-knowledge-graph repo</p>
+
+<pre><code>git clone git@github.com:wwlib/neo4j-knowledge-graph.git
+cd  neo4j-knowledge-graph
+yarn
+</code></pre>
+
+<p>In the Atom editor, the project looks like this:</p>
+
+<p><img src="./img/neo4j-kg-tutorial-atom.png" alt="neo4j-knowledge-graph" /></p>
+
+<p>2 - NLU
+Create either a LUIS or Dialogflow NLU agent by uploading one of the included agent description files to your LUIS or Dialogflow account:</p>
+
+<ul>
+<li>docs/dialogflow-knowledge-graph.zip</li>
+
+<li>docs/luis-knowledge-graph.json</li>
+</ul>
+
+<p>See the NLU screenshots at the end of this post for descriptions of these agents.</p>
+
+<p>3 - Neo4j
+Download and install the free Neo4j Desktop app from https://neo4j.com/download-neo4j-now/ and create a new graph.</p>
+
+<p><img src="./img/neo4j-kg-tutorial-neo4j-desktop.png" alt="neo4j-knowledge-graph" /></p>
+
+<p>Start the graph and access it in the browser at: http://localhost:7474/browser/</p>
+
+<p>To populate the graph, paste the contents of docs/animals.cypher into the neo4j browser query field. Then verify that the graph is ready by entering this cypher into the browser query field:</p>
+
+<p><code>MATCH (n) return n limit 100</code></p>
+
+<p>The result should look like the image below.</p>
+
+<p><img src="./img/neo4j-kg-tutorial-neo4j-browser.png" alt="neo4j-knowledge-graph" /></p>
+
+<p>To see just the animal relationships, enter this cypher into the browser query field:</p>
+
+<p><code>match (n)-[r:IS_A]-(m) return n, r, m</code></p>
+
+<p>The result should look like the image below</p>
+
+<p><img src="./img/neo4j-kg-tutorial-animals-IS_A.png" alt="neo4j-knowledge-graph" /></p>
+
+<p>4 - Configuring the neo4j-knowledge-graph command-line app</p>
+
+<p>Copy <code>data/config-example.json</code> and rename it <code>data/config.json</code></p>
+
+<p>Then fill out the access credentials for your LUIS and/or Dialogflow agent. Fill out the user and password fields for your neo4j graph.</p>
+
+<pre><code>{
+   "luis": {
+        "endpoint": "",
+        "appId": "",
+        "subscriptionKey": ""
+    },
+    "dialogflow": {
+        "clientToken": "",
+        "projectId": "",
+        "privateKey" : "",
+        "clientEmail": ""
+    },
+    "neo4j": {
+        "url": "bolt://localhost:7687",
+        "user": "neo4j",
+        "password": ""
+    }
+}
+</code></pre>
+
+<p>Save the <code>data/config.json</code> file.</p>
+
+<h4 id="runningthecommandlineapp">Running the command line app</h4>
+
+<p>In a terminal window, in the <code>neo4j-knowledge-graph</code> directory, build and run the command line app:</p>
+
+<pre><code>yarn build
+yarn debug
+</code></pre>
+
+<p>If everything is setup correctly, you should should be prompted with:</p>
+
+<p><code>Ask a do-you-like question or say “[user] likes [something]”</code></p>
+
+<p>Try asking (typing): <code>do you like penguins</code></p>
+
+<p>The response should look like the screen below:</p>
+
+<p><img src="./img/neo4j-kg-tutorial-doYouLike-penguins.png" alt="neo4j-knowledge-graph" /></p>
+
+<p>The example graph contains a set of animal-related nodes and relationships that looks like this (as seen in Graph Editor):</p>
+
+<p><img src="./img/graph-editor-animals-IS_A.png" alt="neo4j-knowledge-graph" /></p>
+
+<p>The graph also contains nodes and relationship relating a robot and a couple of users to the animals:</p>
+
+<p><img src="./img/neo4j-kg-tutorial-LIKES-cynthia-no-penguins.png" alt="neo4j-knowledge-graph" /></p>
+
+<p>According to the graph, the robot likes Flies, Zebras, Whales, Armadillos, Flamingos, and Penguins. Andrew likes whales. Cynthia likes the robot. Asking, “do you like whales” produces the response below: “You know it. One of my favorite animals...and I know that Andrew likes them too.”</p>
+
+<p>Note: In the Penguin node has a special RobotLikes property which is used in the response. A generic response is generated for nodes that do not have this property.</p>
+
+<p><img src="./img/neo4j-kg-tutorial-doYouLike-whales.png" alt="neo4j-knowledge-graph" /></p>
+
+<p>To answer the question, “Do you like bats”, the app must make an upward reference because the robot does not have a direct LIKES relationship to bats. The app checks the bat’s parent node, AnimalType (Mammal), and then responds with a list of mammals that the robot does like:</p>
+
+<p>“I don’t know if I like bats, but they are Mammals and I do like Mammals. Of all the Mammals I like Armadillos, Zebras, and Whales.”</p>
+
+<p><img src="./img/neo4j-kg-tutorial-doYouLike-bats.png" alt="neo4j-knowledge-graph" /></p>
+
+<p><img src="./img/neo4j-kg-tutorial-mammals-LIKES.png" alt="neo4j-knowledge-graph" /></p>
+
+<p>The graph can be modified by asserting that a user likes something. For example, asserting that “cynthia likes penguins” produces the result:</p>
+
+<p>OK. I understand that cynthia likes penguins. That’s cool.</p>
+
+<p><img src="./img/neo4j-kg-tutorial-userLikes-cynthia.png" alt="neo4j-knowledge-graph" /></p>
+
+<p>Querying the graph now reveals that the fact that Cynthia likes penguins has been incorporated:</p>
+
+<p><code>match (n)-[r:LIKES]-(m) return n, r, m</code></p>
+
+<p><img src="./img/neo4j-kg-tutorial-LIKES-cynthia-penguins.png" alt="neo4j-knowledge-graph" /></p>
+
+<p>Now, asking if the robot likes penguins produces a response that includes the new information about Cynthia:</p>
+
+<p><img src="./img/neo4j-kg-tutorial-doYouLike-penguins-cynthia.png" alt="neo4j-knowledge-graph" /></p>
+
+<p>When asking about an AnimalType, like ‘Animal’, the answer will include all of the descendants that are liked by the robot.</p>
+
+<p><img src="./img/neo4j-kg-tutorial-doYouLike-animals.png" alt="neo4j-knowledge-graph" /></p>
+
+<h3 id="summary">Summary</h3>
+
+<p>This simple example offers a quick way to incorporate a knowledge graph into a dialog interaction. As seen in the intro video (at the start of the post) when this kind of interaction is embodied by a social robot like Jibo, the experience is compelling - especially when the app/robot remembers information asserted by the user.</p>
+
+<p>The example suggests that knowledge graphs may offer a path to take to making automated dialog significantly more human-like</p>
+
+<h3 id="appendixnlusetupdetails">Appendix: NLU Setup Details</h3>
+
+<h4 id="luis">LUIS</h4>
+
+<p><img src="./img/LUIS-kg-apps.png" alt="LUIS" /></p>
+
+<p><img src="./img/LUIS-kg-intents.png" alt="LUIS" /></p>
+
+<p><img src="./img/LUIS-kg-intent-launchDoYouLike.png" alt="LUIS" /></p>
+
+<p><img src="./img/LUIS-kg-intent-launchUserLikes.png" alt="LUIS" /></p>
+
+<p><img src="./img/LUIS-kg-entities.png" alt="LUIS" /></p>
+
+<p><img src="./img/LUIS-kg-entity-thing.png" alt="LUIS" /></p>
+
+<p><img src="./img/LUIS-kg-entity-user.png" alt="LUIS" /></p>
+
+<h4 id="dialogflow">dialogflow</h4>
+
+<p><img src="./img/dialogflow-kg-intent-launchDoYouLike.png" alt="Dialogflow" /></p>
+
+<p><img src="./img/dialogflow-kg-intent-launchUserLikes.png" alt="Dialogflow" /></p>
+
+<p><img src="./img/dialogflow-intents.png" alt="Dialogflow" /></p>
+
+<p><img src="./img/dialogflow-kg-entity-user.png" alt="Dialogflow" /></p>
+
+<p><img src="./img/dialogflow-kg-entity-thing.png" alt="Dialogflow" /></p>
+
+<p><img src="./img/dialogflow-kg-entities.png" alt="Dialogflow" /></p>
+
+</body>
+</html>

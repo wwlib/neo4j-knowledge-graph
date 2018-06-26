@@ -4,3 +4,4 @@ data/*config.json
 hide
 dist
 *.ipynb*
+.vscode
