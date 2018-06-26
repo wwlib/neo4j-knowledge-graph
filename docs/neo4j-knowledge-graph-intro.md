@@ -19,7 +19,7 @@ Note: A nice tool for viewing and live-editing neo4j graphs is called Graph Edit
 
 ### Overview
 
-Overview video (YouTube): [https://www.youtube.com/embed/rYSjbH23u9g](https://www.youtube.com/embed/pEps_xaUWVo)
+Overview video (YouTube): [https://www.youtube.com/embed/YFRiWiZJPkU](https://www.youtube.com/embed/pEps_xaUWVo)
 
 ### Getting Started
 
