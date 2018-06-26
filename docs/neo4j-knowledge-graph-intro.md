@@ -3,7 +3,7 @@
 *Subject*: Neo4j Knowledge Graph  
 *Language*: TypeScript (node)  
 *Repo*: git@github.com:wwlib/neo4j-knowledge-graph.git  
-*Related*: Electron-based Graph Editor Tool: https://wwlib.github.io/graph-editor/
+*Related*: Electron-based Graph Editor Tool: [https://wwlib.github.io/graph-editor/](https://wwlib.github.io/graph-editor/)
 
 [https://wwlib.github.io/neo4j-knowledge-graph/](https://wwlib.github.io/neo4j-knowledge-graph/)
 
@@ -13,9 +13,9 @@ An example of a simple, queryable knowledge graph implemented using neo4j with a
 
 Knowldge Graph Demo Demo Running on Jibo (YouTube): [https://www.youtube.com/embed/0oVCR3pIz0Q](https://www.youtube.com/embed/0oVCR3pIz0Q)
 
-Note: The code described in this post is based on an example that I worked on with Roberto Pieraccini (http://robertopieraccini.com/home/) at Jibo, Inc. We used a similar example to test a knowledge-graph-enhanced dialog running on Jibo (as seen in the video referenced above)
+Note: The code described in this post is based on an example that I worked on with Roberto Pieraccini [http://robertopieraccini.com/home/](http://robertopieraccini.com/home/) at Jibo, Inc. We used a similar example to test a knowledge-graph-enhanced dialog running on Jibo (as seen in the video referenced above)
 
-Note: A nice tool for viewing and live-editing neo4j graphs is called Graph Editor and is available at http://wwlib.org/graph-editor/
+Note: A nice tool for viewing and live-editing neo4j graphs is called Graph Editor and is available at [http://wwlib.org/graph-editor/](http://wwlib.org/graph-editor/)
 
 ### Overview
 
@@ -50,11 +50,11 @@ Create either a LUIS or Dialogflow NLU agent by uploading one of the included ag
 See the NLU screenshots at the end of this post for descriptions of these agents.
 
 3 - Neo4j
-Download and install the free Neo4j Desktop app from https://neo4j.com/download-neo4j-now/ and create a new graph.
+Download and install the free Neo4j Desktop app from [https://neo4j.com/download-neo4j-now/](https://neo4j.com/download-neo4j-now/) and create a new graph.
 
 ![neo4j-knowledge-graph](./img/neo4j-kg-tutorial-neo4j-desktop.png)
 
-Start the graph and access it in the browser at: http://localhost:7474/browser/
+Start the graph and access it in the browser at: [http://localhost:7474/browser/](http://localhost:7474/browser/)
 
 To populate the graph, paste the contents of docs/animals.cypher into the neo4j browser query field. Then verify that the graph is ready by entering this cypher into the browser query field:
 
