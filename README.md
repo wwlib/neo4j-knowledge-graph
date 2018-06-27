@@ -16,7 +16,7 @@ Note: A nice tool for viewing and live-editing neo4j graphs is called Graph Edit
 
 [https://wwlib.github.io/neo4j-knowledge-graph/neo4j-knowledge-graph-intro.html](https://wwlib.github.io/neo4j-knowledge-graph/neo4j-knowledge-graph-intro.html)
 
-## Neo4j Setup
+### Neo4j Setup
 
 Create an empty graph using the Neo4j Desktop app (https://neo4j.com/download-neo4j-now/).
 
@@ -24,19 +24,19 @@ To create the *animals* graph, copy the contents of `docs/animals.cypher` into t
 
 Verify the nodes/relationships with this cypher/query: `match (n) return n`
 
-## NLU
+### NLU
 
 neo4j-knowledge-graph can be used with either Microsoft's LUIS NLU or google's Dialogflow.com NLU.
 
-### LUIS
+#### LUIS
 
 To use LUIS, create a LUIS app (https://www.luis.ai/) and configure it by importing `docs/luis-knowledge-graph.json`.
 
-### Dialogflow
+#### Dialogflow
 
 To use Dialogflow, create a Dialogflow app (https://console.dialogflow.com/) and configure it by importing `docs/dialogflow-knowledge-graph.zip`.
 
-## Configuration
+### Configuration
 
 Copy `data/config-example.json` to `data/config.json` and fill out the fields for Neo4j, LUIS and/or Dialogflow.
 
@@ -61,27 +61,27 @@ Copy `data/config-example.json` to `data/config.json` and fill out the fields fo
 }
 ```
 
-## Installation and Building
+### Installation and Building
 
 ```
 yarn
 yarn build
 ```
 
-## Running
+#### Running
 
 `yarn start`  
 or  
 `yarn debug`
 
-## CLI
+#### CLI
 
 ? Ask a do-you-like question or say "[user] likes [something]".  
 `do you like penguins`  
 `do you like bats`  
 `do you like mammals`  
 
-## Test Apps
+#### Test Apps
 
 `node ./dist/testLUISController.js --help`
 
@@ -95,7 +95,7 @@ Options:
   -V, --version            output the version number
   -q, --query <query>      The query to test
   -h, --help               output usage information
-  ```
+```
 
 `node ./dist/testDialogflowController.js --help`
 

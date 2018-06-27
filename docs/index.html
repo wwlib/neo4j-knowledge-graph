@@ -17,145 +17,144 @@
 </head>
 <body>
 
-    <h2 id="neo4jknowledgegraph">neo4j-knowledge-graph</h2>
+<h2 id="neo4jknowledgegraph">neo4j-knowledge-graph</h2>
 
-    <p><a href="https://wwlib.github.io/neo4j-knowledge-graph/">https://wwlib.github.io/neo4j-knowledge-graph/</a></p>
+<p><a href="https://wwlib.github.io/neo4j-knowledge-graph/">https://wwlib.github.io/neo4j-knowledge-graph/</a></p>
 
-    <p><a href="https://github.com/wwlib/neo4j-knowledge-graph">https://github.com/wwlib/neo4j-knowledge-graph</a></p>
+<p><a href="https://github.com/wwlib/neo4j-knowledge-graph">https://github.com/wwlib/neo4j-knowledge-graph</a></p>
 
-    <p><a href="https://wwlib.github.io/">https://wwlib.github.io</a></p>
+<p><a href="https://wwlib.github.io/">https://wwlib.github.io</a></p>
 
-    <p>An example of a simple, queryable knowledge graph implemented using neo4j with a node command line interface implemented in TypeScript.</p>
+<p>An example of a simple, queryable knowledge graph implemented using neo4j with a node command line interface implemented in TypeScript.</p>
 
-    <p>Note: Based on a python example created by Roberto Pieraccini (http://robertopieraccini.com/home/)</p>
+<p>Note: Based on a python example created by Roberto Pieraccini (http://robertopieraccini.com/home/)</p>
 
-    <p>Note: A nice tool for viewing and live-editing neo4j graphs is called Graph Editor and is available at http://wwlib.org/graph-editor/</p>
+<p>Note: A nice tool for viewing and live-editing neo4j graphs is called Graph Editor and is available at http://wwlib.org/graph-editor/</p>
 
-    <h3 id="docs">Docs</h3>
+<h3 id="docs">Docs</h3>
 
-    <p><a href="https://wwlib.github.io/neo4j-knowledge-graph/neo4j-knowledge-graph-intro.html">https://wwlib.github.io/neo4j-knowledge-graph/neo4j-knowledge-graph-intro.html</a></p>
+<p><a href="https://wwlib.github.io/neo4j-knowledge-graph/neo4j-knowledge-graph-intro.html">https://wwlib.github.io/neo4j-knowledge-graph/neo4j-knowledge-graph-intro.html</a></p>
 
-    <h2 id="neo4jsetup">Neo4j Setup</h2>
+<h3 id="neo4jsetup">Neo4j Setup</h3>
 
-    <p>Create an empty graph using the Neo4j Desktop app (https://neo4j.com/download-neo4j-now/).</p>
+<p>Create an empty graph using the Neo4j Desktop app (https://neo4j.com/download-neo4j-now/).</p>
 
-    <p>To create the <em>animals</em> graph, copy the contents of <code>docs/animals.cypher</code> into the neo4j browser cypher/query field. (http://localhost:7474/browser/)</p>
+<p>To create the <em>animals</em> graph, copy the contents of <code>docs/animals.cypher</code> into the neo4j browser cypher/query field. (http://localhost:7474/browser/)</p>
 
-    <p>Verify the nodes/relationships with this cypher/query: <code>match (n) return n</code></p>
+<p>Verify the nodes/relationships with this cypher/query: <code>match (n) return n</code></p>
 
-    <h2 id="nlu">NLU</h2>
+<h3 id="nlu">NLU</h3>
 
-    <p>neo4j-knowledge-graph can be used with either Microsoft's LUIS NLU or google's Dialogflow.com NLU.</p>
+<p>neo4j-knowledge-graph can be used with either Microsoft's LUIS NLU or google's Dialogflow.com NLU.</p>
 
-    <h3 id="luis">LUIS</h3>
+<h4 id="luis">LUIS</h4>
 
-    <p>To use LUIS, create a LUIS app (https://www.luis.ai/) and configure it by importing <code>docs/luis-knowledge-graph.json</code>.</p>
+<p>To use LUIS, create a LUIS app (https://www.luis.ai/) and configure it by importing <code>docs/luis-knowledge-graph.json</code>.</p>
 
-    <h3 id="dialogflow">Dialogflow</h3>
+<h4 id="dialogflow">Dialogflow</h4>
 
-    <p>To use Dialogflow, create a Dialogflow app (https://console.dialogflow.com/) and configure it by importing <code>docs/dialogflow-knowledge-graph.zip</code>.</p>
+<p>To use Dialogflow, create a Dialogflow app (https://console.dialogflow.com/) and configure it by importing <code>docs/dialogflow-knowledge-graph.zip</code>.</p>
 
-    <h2 id="configuration">Configuration</h2>
+<h3 id="configuration">Configuration</h3>
 
-    <p>Copy <code>data/config-example.json</code> to <code>data/config.json</code> and fill out the fields for Neo4j, LUIS and/or Dialogflow.</p>
+<p>Copy <code>data/config-example.json</code> to <code>data/config.json</code> and fill out the fields for Neo4j, LUIS and/or Dialogflow.</p>
 
-    <pre><code>{
-       "luis": {
-            "endpoint": "",
-            "appId": "",
-            "subscriptionKey": ""
-        },
-        "dialogflow": {
-            "clientToken": "",
-            "projectId": "",
-            "privateKey" : "",
-            "clientEmail": ""
-        },
-        "neo4j": {
-            "url": "bolt://localhost:7687",
-            "user": "neo4j",
-            "password": ""
-        }
+<pre><code>{
+   "luis": {
+        "endpoint": "",
+        "appId": "",
+        "subscriptionKey": ""
+    },
+    "dialogflow": {
+        "clientToken": "",
+        "projectId": "",
+        "privateKey" : "",
+        "clientEmail": ""
+    },
+    "neo4j": {
+        "url": "bolt://localhost:7687",
+        "user": "neo4j",
+        "password": ""
     }
-    </code></pre>
+}
+</code></pre>
 
-    <h2 id="installationandbuilding">Installation and Building</h2>
+<h3 id="installationandbuilding">Installation and Building</h3>
 
-    <pre><code>yarn
-    yarn build
-    </code></pre>
+<pre><code>
+yarn
+yarn build
+</code></pre>
 
-    <h2 id="running">Running</h2>
+<h4 id="running">Running</h4>
 
-    <p><code>yarn start</code> <br />
-    or <br />
-    <code>yarn debug</code></p>
+<p><code>yarn start</code> <br />
+or <br />
+<code>yarn debug</code></p>
 
-    <h2 id="cli">CLI</h2>
+<h4 id="cli">CLI</h4>
 
-    <p>? Ask a do-you-like question or say "[user] likes [something]". <br />
-    <code>do you like penguins</code> <br />
-    <code>do you like bats</code> <br />
-    <code>do you like mammals</code>  </p>
+<p>? Ask a do-you-like question or say "[user] likes [something]". <br />
+<code>do you like penguins</code> <br />
+<code>do you like bats</code> <br />
+<code>do you like mammals</code>  </p>
 
-    <h2 id="testapps">Test Apps</h2>
+<h4 id="testapps">Test Apps</h4>
 
-    <p><code>node ./dist/testLUISController.js --help</code></p>
+<p><code>node ./dist/testLUISController.js --help</code></p>
 
-    <pre><code>Usage: testLUISController [options]
+<pre><code>Usage: testLUISController [options]
 
-    An application testing LUIS requests
+An application testing LUIS requests
 
-    Options:
+Options:
 
-      -V, --version            output the version number
-      -q, --query &lt;query&gt;      The query to test
-      -h, --help               output usage information
-      ```
+  -V, --version            output the version number
+  -q, --query &lt;query&gt;      The query to test
+  -h, --help               output usage information
+</code></pre>
 
-    `node ./dist/testDialogflowController.js --help`
-    </code></pre>
+<p><code>node ./dist/testDialogflowController.js --help</code></p>
 
-    <p>Usage: testDialogflowController [options]</p>
+<pre><code>Usage: testDialogflowController [options]
 
-    <p>An application testing for dialogflow requests</p>
+  An application testing for dialogflow requests
 
-    <p>Options:
-        -V, --version            output the version number
-        -q, --query <query>      The query to test
-        -c, --context <context>
-        -h, --help               output usage information</p>
+  Options:
+    -V, --version            output the version number
+    -q, --query &lt;query&gt;      The query to test
+    -c, --context &lt;context&gt;
+    -h, --help               output usage information
+</code></pre>
 
-    <pre><code>`node ./dist/testNeo4jController.js --help`
-    </code></pre>
+<p><code>node ./dist/testNeo4jController.js --help</code></p>
 
-    <p>Usage: testNeo4jController [options]</p>
+<pre><code>Usage: testNeo4jController [options]
 
-    <p>An application for testing neo4j cyphers</p>
+An application for testing neo4j cyphers
 
-    <p>Options:</p>
+Options:
 
-    <p>-V, --version          output the version number
-      -c, --cypher <cypher>  Specify the cypher to test
-      --d3                   Parse results with D3Helper
-      -h, --help             output usage information</p>
+  -V, --version          output the version number
+  -c, --cypher &lt;cypher&gt;  Specify the cypher to test
+  --d3                   Parse results with D3Helper
+  -h, --help             output usage information
+</code></pre>
 
-    <pre><code>`node ./dist/testDialogManager.js --help`
-    </code></pre>
+<p><code>node ./dist/testDialogManager.js --help</code></p>
 
-    <p>Usage: testDialogManager [options]</p>
+<pre><code>Usage: testDialogManager [options]
 
-    <p>An application for testing the DialogManager class</p>
+An application for testing the DialogManager class
 
-    <p>Options:</p>
+Options:
 
-    <p>-V, --version            output the version number
-      -q, --query <query>      The query to test
-      -c, --context <context>
-      -n, --nlu <nlu>          luis, dialogflow, dialogflowV1
-      -h, --help               output usage information
-    ```</p>
-
+  -V, --version            output the version number
+  -q, --query &lt;query&gt;      The query to test
+  -c, --context &lt;context&gt;
+  -n, --nlu &lt;nlu&gt;          luis, dialogflow, dialogflowV1
+  -h, --help               output usage information
+</code></pre>
 
 </body>
 </html>
