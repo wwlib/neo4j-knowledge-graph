@@ -16,7 +16,7 @@
     "test-dialog-manager": "ts-node ./tools/test-dialog-manager.ts"
   },
   "author": "Andrew Rapo <andrew@wwlib.org>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "commander": "^6.2.0",
     "inquirer": "^7.3.3",
