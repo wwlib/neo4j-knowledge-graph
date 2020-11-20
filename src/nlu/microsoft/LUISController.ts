@@ -1,11 +1,12 @@
 import NLUController, {
-    NLUIntentAndEntities
-} from './NLUController';
+    NLURequestOptions,
+    NLUIntentAndEntities,
+} from '../NLUController';
 
 const request = require('request');
 const querystring = require('querystring');
 
-const config: any = require('../data/config.json');
+const config: any = require('../../../data/config.json');
 
 export type LUISIntent = {
     intent: string;
@@ -38,9 +39,21 @@ export default class LUISController extends NLUController {
     /**
      * @constructor
      */
-     constructor() {
-         super();
-     }
+    constructor(options: any = {}) {
+        super(options);
+    }
+
+    init(): Promise<any> {
+        return Promise.resolve();
+    }
+
+    set config(config: any) {
+        if (config) {
+            // this._config = config;
+        } else {
+            //
+        }
+    }
 
     call(query: string): Promise<any> {
         // console.log(`LUISController: ${query}`);
@@ -88,13 +101,14 @@ export default class LUISController extends NLUController {
         return entitiesObject;
     }
 
-    getIntentAndEntities(query: string, languageCode: string, context: string, sessionId?: string): Promise<NLUIntentAndEntities> {
+    getIntentAndEntities(utterance: string, options?: NLURequestOptions): Promise<NLUIntentAndEntities> {
         return new Promise((resolve, reject) => {
-            this.call(query)
+            this.call(utterance)
                 .then((response: LUISResponse) => {
                     let intentAndEntities: NLUIntentAndEntities = {
                         intent: response.topScoringIntent.intent,
-                        entities: this.getEntitiesWithResponse(response)
+                        entities: this.getEntitiesWithResponse(response),
+                        response: response,
                     }
                     resolve(intentAndEntities);
                 })

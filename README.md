@@ -26,19 +26,19 @@ Verify the nodes/relationships with this cypher/query: `match (n) return n`
 
 ### NLU
 
-neo4j-knowledge-graph can be used with either Microsoft's LUIS NLU or google's Dialogflow.com NLU.
+neo4j-knowledge-graph can be used with either <a href="https://www.npmjs.com/package/node-nlp" target="_blank">node-nlp</a> or Microsoft's LUIS NLU.com NLU.
+
+### node-nlp
+
+By default, <a href="https://www.npmjs.com/package/node-nlp" target="_blank">node-nlp</a> is used to parse utterances (text input) for intents and entites.
 
 #### LUIS
 
 To use LUIS, create a LUIS app (https://www.luis.ai/) and configure it by importing `docs/luis-knowledge-graph.json`.
 
-#### Dialogflow
-
-To use Dialogflow, create a Dialogflow app (https://console.dialogflow.com/) and configure it by importing `docs/dialogflow-knowledge-graph.zip`.
-
 ### Configuration
 
-Copy `data/config-example.json` to `data/config.json` and fill out the fields for Neo4j, LUIS and/or Dialogflow.
+Copy `data/config-example.json` to `data/config.json` and fill out the fields for Neo4j and LUIS (optional).
 
 ```
 {
@@ -46,12 +46,6 @@ Copy `data/config-example.json` to `data/config.json` and fill out the fields fo
         "endpoint": "",
         "appId": "",
         "subscriptionKey": ""
-    },
-    "dialogflow": {
-        "clientToken": "",
-        "projectId": "",
-        "privateKey" : "",
-        "clientEmail": ""
     },
     "neo4j": {
         "url": "bolt://localhost:7687",
@@ -61,11 +55,11 @@ Copy `data/config-example.json` to `data/config.json` and fill out the fields fo
 }
 ```
 
-### Installation and Building
+### Installation and Running
 
 ```
 yarn
-yarn build
+yarn start
 ```
 
 #### Running
@@ -83,10 +77,10 @@ or
 
 #### Test Apps
 
-`node ./dist/testLUISController.js --help`
+`yarn test-luis-controller --help`
 
 ```
-Usage: testLUISController [options]
+Usage: yarn test-luis-controller [options]
 
 An application testing LUIS requests
 
@@ -97,10 +91,10 @@ Options:
   -h, --help               output usage information
 ```
 
-`node ./dist/testDialogflowController.js --help`
+`yarn test-neo4j --help`
 
 ```
-Usage: testDialogflowController [options]
+Usage: yarn test-neo4j [options]
 
   An application testing for dialogflow requests
 
@@ -126,10 +120,10 @@ Options:
   -h, --help             output usage information
 ```
 
-`node ./dist/testDialogManager.js --help`
+`yarn test-dialog-manager --help`
 
 ```
-Usage: testDialogManager [options]
+Usage: yarn test-dialog-manager [options]
 
 An application for testing the DialogManager class
 

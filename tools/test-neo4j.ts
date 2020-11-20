@@ -1,4 +1,4 @@
-import Neo4jController, {D3Helper} from './neo4j';
+import Neo4jController, {D3Helper} from '../src/neo4j';
 
 const program = require('commander');
 const prettyjson = require('prettyjson');
