@@ -1,4 +1,4 @@
-import LUISController from './LUISController';
+import LUISController from '../src/nlu/microsoft/LUISController';
 
 const program = require('commander');
 const prettyjson = require('prettyjson');

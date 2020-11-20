@@ -27,7 +27,7 @@ Overview video (YouTube): [https://www.youtube.com/embed/YFRiWiZJPkU](https://ww
 
 One way to enhance NLU-driven dialog interactions is to make use of a knowledge graph. This example uses a neo4j graph (database) to store and query a knowledge graph (kg) containing information about animals. This simple example kg represents the relationships between a robot, and handful of animals, a few animal types and a couple of humans.
 
-This command-line version requires either LUIS or Dialogflow for the NLU. A neo4j graph database is also required (ideally an empty graph). Some setup is required to get started.
+This command-line version uses node-nlp by default and can be configured to use Microsoft's LUIS NLU. A neo4j graph database is also required (ideally an empty graph). Some setup is required to get started.
 
 
 #### Setup
@@ -39,9 +39,9 @@ cd  neo4j-knowledge-graph
 yarn
 ```
 
-In the Atom editor, the project looks like this:
+The project looks like this:
 
-![neo4j-knowledge-graph](./img/neo4j-kg-tutorial-atom.png)
+![neo4j-knowledge-graph](./img/neo4j-kg-tutorial-vscode.png)
 
 2 - NLU
 Create either a LUIS or Dialogflow NLU agent by uploading one of the included agent description files to your LUIS or Dialogflow account:
@@ -78,7 +78,7 @@ The result should look like the image below
 
 Copy `data/config-example.json` and rename it `data/config.json`
 
-Then fill out the access credentials for your LUIS and/or Dialogflow agent. Fill out the user and password fields for your neo4j graph.
+Fill out the user and password fields for your neo4j graph. (optional: fill out the access credentials for your LUIS agent). 
 
 ```
 {
@@ -86,12 +86,6 @@ Then fill out the access credentials for your LUIS and/or Dialogflow agent. Fill
         "endpoint": "",
         "appId": "",
         "subscriptionKey": ""
-    },
-    "dialogflow": {
-        "clientToken": "",
-        "projectId": "",
-        "privateKey" : "",
-        "clientEmail": ""
     },
     "neo4j": {
         "url": "bolt://localhost:7687",
@@ -188,17 +182,3 @@ The example suggests that knowledge graphs may offer a path to take to making au
 ![LUIS](./img/LUIS-kg-entity-thing.png)
 
 ![LUIS](./img/LUIS-kg-entity-user.png)
-
-#### dialogflow
-
-![Dialogflow](./img/dialogflow-kg-intent-launchDoYouLike.png)
-
-![Dialogflow](./img/dialogflow-kg-intent-launchUserLikes.png)
-
-![Dialogflow](./img/dialogflow-intents.png)
-
-![Dialogflow](./img/dialogflow-kg-entity-user.png)
-
-![Dialogflow](./img/dialogflow-kg-entity-thing.png)
-
-![Dialogflow](./img/dialogflow-kg-entities.png)

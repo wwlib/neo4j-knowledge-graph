@@ -45,31 +45,26 @@
 
 <h3 id="nlu">NLU</h3>
 
-<p>neo4j-knowledge-graph can be used with either Microsoft's LUIS NLU or google's Dialogflow.com NLU.</p>
+<p>neo4j-knowledge-graph can be used with either <a href="https://www.npmjs.com/package/node-nlp" target="_blank">node-nlp</a> or Microsoft's LUIS NLU.</p>
+
+<h4 id="node-nlp">node-nlp</h4>
+
+<p>By default, <a href="https://www.npmjs.com/package/node-nlp" target="_blank">node-nlp</a> is used to parse utterances (text input) for intents and entites.</p>
 
 <h4 id="luis">LUIS</h4>
 
 <p>To use LUIS, create a LUIS app (https://www.luis.ai/) and configure it by importing <code>docs/luis-knowledge-graph.json</code>.</p>
 
-<h4 id="dialogflow">Dialogflow</h4>
-
-<p>To use Dialogflow, create a Dialogflow app (https://console.dialogflow.com/) and configure it by importing <code>docs/dialogflow-knowledge-graph.zip</code>.</p>
 
 <h3 id="configuration">Configuration</h3>
 
-<p>Copy <code>data/config-example.json</code> to <code>data/config.json</code> and fill out the fields for Neo4j, LUIS and/or Dialogflow.</p>
+<p>Copy <code>data/config-example.json</code> to <code>data/config.json</code> and fill out the fields for Neo4j and LUIS (optional).</p>
 
 <pre><code>{
    "luis": {
         "endpoint": "",
         "appId": "",
         "subscriptionKey": ""
-    },
-    "dialogflow": {
-        "clientToken": "",
-        "projectId": "",
-        "privateKey" : "",
-        "clientEmail": ""
     },
     "neo4j": {
         "url": "bolt://localhost:7687",
@@ -79,11 +74,11 @@
 }
 </code></pre>
 
-<h3 id="installationandbuilding">Installation and Building</h3>
+<h3 id="installationandrunning">Installation and Running</h3>
 
 <pre><code>
 yarn
-yarn build
+yarn start
 </code></pre>
 
 <h4 id="running">Running</h4>
@@ -101,9 +96,9 @@ or <br />
 
 <h4 id="testapps">Test Apps</h4>
 
-<p><code>node ./dist/testLUISController.js --help</code></p>
+<p><code>yarn test-luis-controller --help</code></p>
 
-<pre><code>Usage: testLUISController [options]
+<pre><code>Usage: yarn test-luis-controller [options]
 
 An application testing LUIS requests
 
@@ -114,22 +109,10 @@ Options:
   -h, --help               output usage information
 </code></pre>
 
-<p><code>node ./dist/testDialogflowController.js --help</code></p>
 
-<pre><code>Usage: testDialogflowController [options]
+<p><code>yarn test-neo4j --help</code></p>
 
-  An application testing for dialogflow requests
-
-  Options:
-    -V, --version            output the version number
-    -q, --query &lt;query&gt;      The query to test
-    -c, --context &lt;context&gt;
-    -h, --help               output usage information
-</code></pre>
-
-<p><code>node ./dist/testNeo4jController.js --help</code></p>
-
-<pre><code>Usage: testNeo4jController [options]
+<pre><code>Usage: yarn test-neo4j [options]
 
 An application for testing neo4j cyphers
 
@@ -141,9 +124,9 @@ Options:
   -h, --help             output usage information
 </code></pre>
 
-<p><code>node ./dist/testDialogManager.js --help</code></p>
+<p><code>yarn test-dialog-manager --help</code></p>
 
-<pre><code>Usage: testDialogManager [options]
+<pre><code>Usage: yarn test-dialog-manager [options]
 
 An application for testing the DialogManager class
 
