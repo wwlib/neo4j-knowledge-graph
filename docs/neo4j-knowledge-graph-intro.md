@@ -44,12 +44,11 @@ The project looks like this:
 ![neo4j-knowledge-graph](./img/neo4j-kg-tutorial-vscode.png)
 
 2 - NLU
-Create either a LUIS or Dialogflow NLU agent by uploading one of the included agent description files to your LUIS or Dialogflow account:
+(optional: create either a LUIS agent by uploading the included agent description files to your LUIS account:
 
-- docs/dialogflow-knowledge-graph.zip
 - docs/luis-knowledge-graph.json
 
-See the NLU screenshots at the end of this post for descriptions of these agents.
+See the NLU screenshots at the end of this post for descriptions of the LUIS agent.
 
 3 - Neo4j
 Download and install the free Neo4j Desktop app from [https://neo4j.com/download-neo4j-now/](https://neo4j.com/download-neo4j-now/) and create a new graph.
