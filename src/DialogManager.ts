@@ -6,11 +6,20 @@ import NLUController, {
 import NodeNlpController from './nlu/node-nlp/NodeNlpController';
 import LUISController from './nlu/microsoft/LUISController';
 
-import Neo4jController from './neo4j/Neo4jController';
+import Neo4jController, { Neo4jControllerOptions } from './neo4j/Neo4jController';
 
 import { d3Types } from './d3/d3Types';
 
 const prettyjson = require('prettyjson');
+
+export type DialogManagerOptions = {
+    config: {
+        nluType: string;
+        luis: any;
+        neo4j: any;
+    };
+    debug: boolean;
+}
 
 export default class DialogManager {
 
@@ -22,20 +31,31 @@ export default class DialogManager {
     private _debug: boolean = false;
 
     constructor() {
-        
+
     }
 
-    async init(options: any = {}) {
+    async init(options: DialogManagerOptions) {
         if (options.debug) {
             this._debug = true;
         }
-        if (options.nluType === 'luis') {
-            this.nluController = new LUISController({ debug: this._debug });
+        if (options.config.nluType === 'luis') {
+            const luisConfig: any = {
+                Microsoft: {
+                    nluLUIS_endpoint: options.config.luis.endpoint,
+                    nluLUIS_appId: options.config.luis.appId,
+                    nluLUIS_subscriptionKey: options.config.luis.subscriptionKey,
+                }
+            }
+            this.nluController = new LUISController({ debug: this._debug, config: luisConfig });
         } else {
             this.nluController = new NodeNlpController({ debug: this._debug });
             await this.nluController.init();
         }
-        this.neo4jController = new Neo4jController({ debug: this._debug });
+        const neo4jOptions: Neo4jControllerOptions = {
+            debug: this._debug,
+            config: options.config.neo4j
+        };
+        this.neo4jController = new Neo4jController(neo4jOptions);
     }
 
     ask(question: string, context?: string): Promise<any> {

@@ -21,6 +21,7 @@
     "commander": "^6.2.0",
     "inquirer": "^7.3.3",
     "jest": "^26.6.3",
+    "jsonfile": "^6.1.0",
     "neo4j-driver": "^4.2.1",
     "node-nlp": "^4.16.0",
     "prettyjson": "^1.2.1",

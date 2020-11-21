@@ -46,7 +46,7 @@ The project looks like this:
 2 - NLU
 (optional: create either a LUIS agent by uploading the included agent description files to your LUIS account:
 
-- docs/luis-knowledge-graph.json
+- docs/luis-knowledge-graph.lu
 
 See the NLU screenshots at the end of this post for descriptions of the LUIS agent.
 

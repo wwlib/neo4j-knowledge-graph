@@ -1,0 +1,165 @@
+
+> LUIS application information
+> !# @app.name = neo4j-kg
+> !# @app.desc = For use with a neo4j knowledge graph prototype.
+> !# @app.versionId = 0.3
+> !# @app.culture = en-us
+> !# @app.luis_schema_version = 7.0.0
+> !# @app.tokenizerVersion = 1.0.0
+
+
+> # Intent definitions
+
+## executeGameCommand
+- east
+- i would like to continue
+- i would like to equip the sword
+- let's equip my sword
+- let's exit
+- let's open the chest
+
+
+## launchClock
+- check the time
+- tell me the time
+- tell me what time it is
+- what time is it
+- what's the time
+
+
+## launchDoYouLike
+- are you a fan of whales?
+- do you like animals
+- do you like cheese?
+- do you love armadillos
+
+
+## launchGame
+- let's play a game
+- let's play the game
+- play a game
+- play the game
+
+
+## launchJoke
+- do you know any jokes
+- say something funny
+- tell me a joke
+- tell me something funny
+- tell us a joke
+
+
+## launchUserLikes
+- andrew likes cheese
+- andrew really likes whales
+- jeri loves penguins
+
+
+## None
+
+
+> # Entity definitions
+
+
+> # PREBUILT Entity definitions
+
+
+> # Phrase list definitions
+
+
+> # List entities
+
+@ list gameCommand hasRole command = 
+	- continue :
+		- go
+	- quit :
+	- equip :
+	- fight :
+	- run :
+	- north :
+	- south :
+	- east :
+		- exit
+	- west :
+	- close :
+	- enter :
+	- open :
+
+
+@ list gameObject hasRole object = 
+	- sword :
+	- door :
+	- chest :
+
+
+@ list thing = 
+	- Whale :
+		- whale
+		- whales
+	- Insect :
+		- insect,
+		- insects
+	- Chicken :
+		- chicken,
+		- chickens
+	- Flamingo :
+		- flamingo
+		- flamingos
+	- Animal :
+		- animal
+		- animals
+	- Armadillo :
+		- armadillo
+		- armadillos
+	- Bat :
+		- bat
+		- bats
+	- Penguin :
+		- penguin
+		- penguins
+	- Bird :
+		- bird
+		- birds
+	- Breakfast :
+		- breakfast,
+		- breakfasts
+	- Monkey :
+		- monkey
+		- monkeys
+	- Zebra :
+		- zebra
+		- zebras
+	- Albatross :
+		- albatross
+		- albatrosses
+	- Mammal :
+		- mammal
+		- mammals
+	- Vertebrate :
+		- vertebrate
+		- vertebrates
+	- Cheese :
+		- cheese
+		- cheeses
+	- Butterfly :
+		- butterfly
+		- butterflies
+	- Invertebrate :
+		- invertebrate
+		- invertebrates
+
+
+@ list user = 
+	- Andrew :
+		- andy
+	- Robert :
+		- bob
+	- Jane :
+	- Eric :
+		- rick
+	- Cynthia :
+
+
+> # RegEx entities
+
+

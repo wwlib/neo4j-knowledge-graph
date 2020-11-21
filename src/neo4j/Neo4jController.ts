@@ -1,7 +1,11 @@
 const neo4j = require('neo4j-driver');
-const config = require('../../data/config.json');
 
 import D3Helper from './helpers/D3Helper';
+
+export type Neo4jControllerOptions = {
+    config: any;
+    debug: boolean;
+}
 
 export default class Neo4jController {
 
@@ -9,12 +13,12 @@ export default class Neo4jController {
 
     protected _debug: boolean;
 
-    constructor(options: any = {}) {
+    constructor(options: Neo4jControllerOptions) {
         this._debug = false;
         if (options.debug) {
             this._debug = true;
         }
-        this.driver = neo4j.driver(config.neo4j.url, neo4j.auth.basic(config.neo4j.user, config.neo4j.password));
+        this.driver = neo4j.driver(options.config.url, neo4j.auth.basic(options.config.user, options.config.password));
     }
 
     call(cypher:string, params?: any): Promise<any> {
