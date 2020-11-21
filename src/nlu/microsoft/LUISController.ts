@@ -4,18 +4,13 @@ const request = require('request');
 const querystring = require('querystring');
 
 export type LUISIntent = {
-    intent: string;
-    score: number;
+    [intent: string]: {
+        score: number;
+    }
 };
 
 export type LUISEntity = {
-    entity: string;
-    type: string;
-    startIndex: number;
-    endIndex: number;
-    resolution: {
-        values: string[];
-    }
+    [entity: string]: [];
 }
 
 export type LUISResponse = {
@@ -83,6 +78,31 @@ export default class LUISController extends NLUController {
         });
     }
 
+    /*
+    "entities": {
+        "thing": [
+            [
+            "Mammal"
+            ]
+        ],
+        "$instance": {
+            "thing": [
+            {
+                "type": "thing",
+                "text": "mammals",
+                "startIndex": 12,
+                "length": 7,
+                "modelTypeId": 5,
+                "modelType": "List Entity Extractor",
+                "recognitionSources": [
+                "model"
+                ]
+            }
+            ]
+        }
+    }
+    */
+
     getEntitiesWithResponse(response: LUISResponse): any {
         let entitiesObject: any = {
             user: 'Someone',
@@ -91,12 +111,22 @@ export default class LUISController extends NLUController {
             thingOriginal: 'that'
         };
 
-        if (response.prediction && response.prediction.entities) {
-            response.prediction.entities.forEach((entity: LUISEntity) => {
-                entitiesObject[`${entity.type}Original`] = entity.entity;
-                if (entity.resolution && entity.resolution.values) {
-                    entitiesObject[`${entity.type}`] = entity.resolution.values[0];
+        if (response.prediction && response.prediction.entities && response.prediction.entities['$instance']) {
+            const entityKeys: string[] = Object.keys(response.prediction.entities);
+            entityKeys.forEach((entityKey: string) => {
+                if (entityKey !== '$instance') {
+                    if (this._debug) console.log(entityKey);
+                    const entity: string[] = response.prediction.entities[entityKey][0];
+                    entitiesObject[entityKey] = entity[0];
                 }
+            });
+            const instanceKeys: string[] = Object.keys(response.prediction.entities['$instance']);
+            instanceKeys.forEach((instanceKey: string) => {
+                if (this._debug) console.log(instanceKey);
+                const entityObjects: any[] = response.prediction.entities['$instance'][instanceKey];
+                if (this._debug) console.log(`entityObject:`, entityObjects[0]);
+                const originalKey: string = `${instanceKey}Original`;
+                entitiesObject[originalKey] = entityObjects[0].text;
             });
         }
         return entitiesObject;
@@ -117,7 +147,7 @@ export default class LUISController extends NLUController {
                     let intentAndEntities: NLUIntentAndEntities = {
                         intent: '',
                         intents: response.prediction.intents,
-                        entities: response.prediction.entities,
+                        entities: this.getEntitiesWithResponse(response),
                         response: response
                     }
                     if (response && response.prediction && response.prediction.topIntent) {

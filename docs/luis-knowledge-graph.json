@@ -1,0 +1,431 @@
+{
+  "luis_schema_version": "7.0.0",
+  "intents": [
+    {
+      "name": "executeGameCommand",
+      "features": []
+    },
+    {
+      "name": "launchClock",
+      "features": []
+    },
+    {
+      "name": "launchDoYouLike",
+      "features": []
+    },
+    {
+      "name": "launchGame",
+      "features": []
+    },
+    {
+      "name": "launchJoke",
+      "features": []
+    },
+    {
+      "name": "launchUserLikes",
+      "features": []
+    },
+    {
+      "name": "None",
+      "features": []
+    }
+  ],
+  "entities": [],
+  "hierarchicals": [],
+  "composites": [],
+  "closedLists": [
+    {
+      "name": "gameCommand",
+      "subLists": [
+        {
+          "canonicalForm": "continue",
+          "list": [
+            "go"
+          ]
+        },
+        {
+          "canonicalForm": "quit",
+          "list": []
+        },
+        {
+          "canonicalForm": "equip",
+          "list": []
+        },
+        {
+          "canonicalForm": "fight",
+          "list": []
+        },
+        {
+          "canonicalForm": "run",
+          "list": []
+        },
+        {
+          "canonicalForm": "north",
+          "list": []
+        },
+        {
+          "canonicalForm": "south",
+          "list": []
+        },
+        {
+          "canonicalForm": "east",
+          "list": [
+            "exit"
+          ]
+        },
+        {
+          "canonicalForm": "west",
+          "list": []
+        },
+        {
+          "canonicalForm": "close",
+          "list": []
+        },
+        {
+          "canonicalForm": "enter",
+          "list": []
+        },
+        {
+          "canonicalForm": "open",
+          "list": []
+        }
+      ],
+      "roles": [
+        "command"
+      ]
+    },
+    {
+      "name": "gameObject",
+      "subLists": [
+        {
+          "canonicalForm": "sword",
+          "list": []
+        },
+        {
+          "canonicalForm": "door",
+          "list": []
+        },
+        {
+          "canonicalForm": "chest",
+          "list": []
+        }
+      ],
+      "roles": [
+        "object"
+      ]
+    },
+    {
+      "name": "thing",
+      "subLists": [
+        {
+          "canonicalForm": "Whale",
+          "list": [
+            "whale",
+            "whales"
+          ]
+        },
+        {
+          "canonicalForm": "Insect",
+          "list": [
+            "insect,",
+            "insects"
+          ]
+        },
+        {
+          "canonicalForm": "Chicken",
+          "list": [
+            "chicken,",
+            "chickens"
+          ]
+        },
+        {
+          "canonicalForm": "Flamingo",
+          "list": [
+            "flamingo",
+            "flamingos"
+          ]
+        },
+        {
+          "canonicalForm": "Animal",
+          "list": [
+            "animal",
+            "animals"
+          ]
+        },
+        {
+          "canonicalForm": "Armadillo",
+          "list": [
+            "armadillo",
+            "armadillos"
+          ]
+        },
+        {
+          "canonicalForm": "Bat",
+          "list": [
+            "bat",
+            "bats"
+          ]
+        },
+        {
+          "canonicalForm": "Penguin",
+          "list": [
+            "penguin",
+            "penguins"
+          ]
+        },
+        {
+          "canonicalForm": "Bird",
+          "list": [
+            "bird",
+            "birds"
+          ]
+        },
+        {
+          "canonicalForm": "Breakfast",
+          "list": [
+            "breakfast,",
+            "breakfasts"
+          ]
+        },
+        {
+          "canonicalForm": "Monkey",
+          "list": [
+            "monkey",
+            "monkeys"
+          ]
+        },
+        {
+          "canonicalForm": "Zebra",
+          "list": [
+            "zebra",
+            "zebras"
+          ]
+        },
+        {
+          "canonicalForm": "Albatross",
+          "list": [
+            "albatross",
+            "albatrosses"
+          ]
+        },
+        {
+          "canonicalForm": "Mammal",
+          "list": [
+            "mammal",
+            "mammals"
+          ]
+        },
+        {
+          "canonicalForm": "Vertebrate",
+          "list": [
+            "vertebrate",
+            "vertebrates"
+          ]
+        },
+        {
+          "canonicalForm": "Cheese",
+          "list": [
+            "cheese",
+            "cheeses"
+          ]
+        },
+        {
+          "canonicalForm": "Butterfly",
+          "list": [
+            "butterfly",
+            "butterflies"
+          ]
+        },
+        {
+          "canonicalForm": "Invertebrate",
+          "list": [
+            "invertebrate",
+            "invertebrates"
+          ]
+        }
+      ],
+      "roles": []
+    },
+    {
+      "name": "user",
+      "subLists": [
+        {
+          "canonicalForm": "Andrew",
+          "list": [
+            "andy"
+          ]
+        },
+        {
+          "canonicalForm": "Cynthia",
+          "list": []
+        },
+        {
+          "canonicalForm": "Robert",
+          "list": [
+            "bob"
+          ]
+        },
+        {
+          "canonicalForm": "Eric",
+          "list": [
+            "rick"
+          ]
+        },
+        {
+          "canonicalForm": "Jane",
+          "list": []
+        }
+      ],
+      "roles": []
+    }
+  ],
+  "prebuiltEntities": [],
+  "utterances": [
+    {
+      "text": "andrew likes cheese",
+      "intent": "launchUserLikes",
+      "entities": []
+    },
+    {
+      "text": "andrew really likes whales",
+      "intent": "launchUserLikes",
+      "entities": []
+    },
+    {
+      "text": "are you a fan of whales?",
+      "intent": "launchDoYouLike",
+      "entities": []
+    },
+    {
+      "text": "check the time",
+      "intent": "launchClock",
+      "entities": []
+    },
+    {
+      "text": "do you know any jokes",
+      "intent": "launchJoke",
+      "entities": []
+    },
+    {
+      "text": "do you like animals",
+      "intent": "launchDoYouLike",
+      "entities": []
+    },
+    {
+      "text": "do you like cheese?",
+      "intent": "launchDoYouLike",
+      "entities": []
+    },
+    {
+      "text": "do you love armadillos",
+      "intent": "launchDoYouLike",
+      "entities": []
+    },
+    {
+      "text": "east",
+      "intent": "executeGameCommand",
+      "entities": []
+    },
+    {
+      "text": "i would like to continue",
+      "intent": "executeGameCommand",
+      "entities": []
+    },
+    {
+      "text": "i would like to equip the sword",
+      "intent": "executeGameCommand",
+      "entities": []
+    },
+    {
+      "text": "jeri loves penguins",
+      "intent": "launchUserLikes",
+      "entities": []
+    },
+    {
+      "text": "let's equip my sword",
+      "intent": "executeGameCommand",
+      "entities": []
+    },
+    {
+      "text": "let's exit",
+      "intent": "executeGameCommand",
+      "entities": []
+    },
+    {
+      "text": "let's open the chest",
+      "intent": "executeGameCommand",
+      "entities": []
+    },
+    {
+      "text": "let's play a game",
+      "intent": "launchGame",
+      "entities": []
+    },
+    {
+      "text": "let's play the game",
+      "intent": "launchGame",
+      "entities": []
+    },
+    {
+      "text": "play a game",
+      "intent": "launchGame",
+      "entities": []
+    },
+    {
+      "text": "play the game",
+      "intent": "launchGame",
+      "entities": []
+    },
+    {
+      "text": "say something funny",
+      "intent": "launchJoke",
+      "entities": []
+    },
+    {
+      "text": "tell me a joke",
+      "intent": "launchJoke",
+      "entities": []
+    },
+    {
+      "text": "tell me something funny",
+      "intent": "launchJoke",
+      "entities": []
+    },
+    {
+      "text": "tell me the time",
+      "intent": "launchClock",
+      "entities": []
+    },
+    {
+      "text": "tell me what time it is",
+      "intent": "launchClock",
+      "entities": []
+    },
+    {
+      "text": "tell us a joke",
+      "intent": "launchJoke",
+      "entities": []
+    },
+    {
+      "text": "what time is it",
+      "intent": "launchClock",
+      "entities": []
+    },
+    {
+      "text": "what's the time",
+      "intent": "launchClock",
+      "entities": []
+    }
+  ],
+  "versionId": "0.3",
+  "name": "neo4j-kg",
+  "desc": "For use with a neo4j knowledge graph prototype.",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "phraselists": [],
+  "regex_features": [],
+  "patterns": [],
+  "settings": []
+}

@@ -152,12 +152,12 @@
 @ list user = 
 	- Andrew :
 		- andy
+	- Cynthia :
 	- Robert :
 		- bob
-	- Jane :
 	- Eric :
 		- rick
-	- Cynthia :
+	- Jane :
 
 
 > # RegEx entities

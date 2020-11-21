@@ -67,6 +67,9 @@ export default class DialogManager {
             }
             this.nluController.getIntentAndEntities(question, options)
                 .then((intentAndEntities: NLUIntentAndEntities) => {
+                    if (this._debug) {
+                        console.log(`DialogManager: ask: intentAndEntities:`, JSON.stringify(intentAndEntities, null, 2));
+                    }
                     this.handleNLUIntentAndEntities(intentAndEntities)
                         .then((answer) => {
                             resolve(answer);
