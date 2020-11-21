@@ -1,8 +1,7 @@
+import NLUController, { NLUControllerOptions, NLUIntentAndEntities, NLURequestOptions, NLULanguageCode } from '../NLUController';
+
 const path = require('path');
 const { NlpManager } = require('node-nlp');
-
-import { ENGINE_METHOD_DIGESTS } from 'constants';
-import NLUController, { NLUIntentAndEntities, NLURequestOptions, NLULanguageCode } from '../NLUController';
 
 export type NodeNlpIntent = {
     intent: string;
@@ -59,12 +58,11 @@ export default class NodeNlpController extends NLUController {
 
     private _classifier: any;
     private _ready: boolean;
-    // private _config: any = {};
 
     /**
      * @constructor
      */
-    constructor(options: any = {}) {
+    constructor(options: NLUControllerOptions = {}) {
         super(options);
         this._ready = false;
     }
@@ -79,7 +77,7 @@ export default class NodeNlpController extends NLUController {
 
     set config(config: any) {
         if (config) {
-            // this._config = config;
+            // 
         } else {
             //
         }
@@ -201,7 +199,9 @@ export default class NodeNlpController extends NLUController {
         return new Promise<NLUIntentAndEntities>((resolve, reject) => {
             let intentAndEntities: NLUIntentAndEntities = {
                 intent: '',
-                entities: undefined
+                intents: undefined,
+                entities: undefined,
+                response: undefined
             }
             if (this._ready && utterance) {
                 this.call(utterance)
@@ -209,6 +209,7 @@ export default class NodeNlpController extends NLUController {
                         if (response && response.intent) {
                             intentAndEntities = {
                                 intent: response.intent,
+                                intents: undefined,
                                 entities: this.getEntitiesWithResponse(response),
                                 response: response,
                             }

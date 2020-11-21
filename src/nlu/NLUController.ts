@@ -1,7 +1,8 @@
 export type NLUIntentAndEntities = {
-    intent: string;
-    entities: any;
-    response?: any;
+  intent: string;
+  intents: any;
+  entities: any;
+  response: any;
 }
 
 export type NLURequestOptions = {
@@ -14,11 +15,16 @@ export enum NLULanguageCode {
   en_US = 'en-US'
 }
 
+export type NLUControllerOptions = {
+  config?: any;
+  debug?: boolean;
+}
+
 export default abstract class NLUController {
 
   protected _debug: boolean;
 
-  constructor(options: any = {}) {
+  constructor(options: NLUControllerOptions = {}) {
     this._debug = false;
     if (options.debug) {
       this._debug = true;

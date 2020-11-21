@@ -1,27 +1,43 @@
 import LUISController from '../src/nlu/microsoft/LUISController';
 
-const program = require('commander');
-const prettyjson = require('prettyjson');
+const path = require('path');
+const jsonfile = require('jsonfile');
 
-let luisController = new LUISController();
+const doTestLuisNlu = () => {
+    
+    const configPath = path.resolve('data/config.json');
+    let config: any;
+    try {
+        config= jsonfile.readFileSync(configPath);
+    } catch (error) {
+        console.error(`Error: data/config.json not found.`);
+        process.exit(0);
+    }
 
-program
-.version('0.0.1')
-.description('An application for testing LUIS requests')
-.option('-q, --query <query>', 'The query to test')
-.parse(process.argv);
+    const luisConfig: any = {
+        Microsoft: {
+            nluLUIS_endpoint: config.luis.endpoint,
+            nluLUIS_appId: config.luis.appId,
+            nluLUIS_subscriptionKey: config.luis.subscriptionKey,
+        }
+    }
+    const luisController = new LUISController({ config: luisConfig, debug: true });
 
-let query: string = 'do you like penguins';
-
-if (program.query) {
-    console.log(program.query);
-    query = program.query;
+    let timeLog = {
+        timeStart: new Date().getTime(),
+        complete: 0,
+        cloudLatency: 0,
+    }
+    luisController.getIntentAndEntities('do you like mammals')
+        .then((intentAndEntities: any) => {
+            timeLog.complete = new Date().getTime();
+            timeLog.cloudLatency = timeLog.complete - timeLog.timeStart;
+            console.log(`NLUIntentAndEntities: `, JSON.stringify(intentAndEntities, null, 2));
+            console.log(`timeLog:`, JSON.stringify(timeLog, null, 2));
+        })
+        .catch((error: any) => {
+            console.log(error);
+        });
 }
 
-luisController.call(query)
-    .then((result: any) => {
-        console.log(prettyjson.render(result, {}));
-    })
-    .catch((err: any) => {
-        console.log(`ERROR: LUISController\n`, err)
-    });
+doTestLuisNlu();

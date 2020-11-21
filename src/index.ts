@@ -1,7 +1,18 @@
+import DialogManager from './DialogManager';
+
+const path = require('path');
+const jsonfile = require('jsonfile');
 const program = require('commander');
 const inquirer = require('inquirer');
 
-import DialogManager from './DialogManager';
+const configPath = path.resolve('data/config.json');
+    let config: any;
+    try {
+        config= jsonfile.readFileSync(configPath);
+    } catch (error) {
+        console.error(`Error: data/config.json not found.`);
+        process.exit(0);
+    }
 
 let dialogManager: DialogManager;
 
@@ -22,7 +33,7 @@ if (program.context) {
 }
 
 dialogManager = new DialogManager();
-dialogManager.init({ debug: program.debug, nluType: 'nodel-nlp' })
+dialogManager.init({ debug: program.debug, config: config })
   .then(() => {
     if (program.reset) {
       console.log('>>>Cleaning up User nodes');

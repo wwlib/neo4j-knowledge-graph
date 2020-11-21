@@ -1,6 +1,7 @@
 {
-   "luis": {
-        "endpoint": "",
+    "nluType": "node-nlp",
+    "luis": {
+        "endpoint": "https://westus.api.cognitive.microsoft.com/",
         "appId": "",
         "subscriptionKey": ""
     },
